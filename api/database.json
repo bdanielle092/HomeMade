@@ -1,0 +1,81 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "username": "blueshoes34",
+            "email": "blue@net.com",
+            "password": "blue34"
+        },
+        {
+            "id": 2,
+            "username": "pink23",
+            "email": "grace@home.com",
+            "password": "Ilovepink"
+        },
+        {
+            "id": 3,
+            "username": "faith33",
+            "email": "faith@home.com",
+            "password": "faith!"
+        }
+    ],
+
+    "recipe": [
+         {
+             "id": 1,
+             "userId": 1,
+             "typeId": 1,
+             "ricipe": "1. milk 2.choclate 3.cream"
+         },
+         {
+            "id": 2,
+            "userId": 2,
+            "typeId": 2,
+            "ricipe": "1. milk 2.blueberries 3.cream"
+        },
+        {
+            "id": 3,
+            "userId": 3,
+            "typeId": 3,
+            "ricipe": "1. lactose milk 2.fudge 3.cream"
+        }
+    ],
+
+    "type":
+    [
+        {
+            "id": 1,
+            "typeName": "choclate"
+        },
+        {
+            "id": 2,
+            "typeName": "blueberry"
+        },
+        {
+            "id": 3,
+            "typeName": "lactose"
+        }
+    ],
+
+    "comments": 
+    [
+        {
+            "id": 1,
+            "userId": 5,
+            "profileId": 1,
+            "comment": "That blueberry ice cream was great"
+        },
+        {
+            "id": 2,
+            "userId": 4,
+            "profileId": 2,
+            "comment": "Have you tried dark choclate ice cream"
+        },
+        {
+            "id": 3,
+            "userId": 7,
+            "profileId": 3,
+            "comment": "My sister love the lactose ice cream"
+        }
+    ]
+}
