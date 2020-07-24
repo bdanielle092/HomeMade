@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import {BrowerRouter as Router} from "react-router-dom";
-import homemade from "./components/homemade";
+import {BrowserRouter as Router} from "react-router-dom";
+import Homemade from "./components/Homemade";
 
 
 ReactDOM.render(
   <Router>
-    <homemade />
+    <Homemade />
   </Router>,
   document.getElementById('root')
 );
+
+
 

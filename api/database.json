@@ -1,5 +1,5 @@
 {
-    "user": [
+    "users": [
         {
             "id": 1,
             "username": "blueshoes34",
@@ -20,28 +20,31 @@
         }
     ],
 
-    "recipe": [
+    "recipes": [
          {
              "id": 1,
              "userId": 1,
              "typeId": 1,
-             "ricipe": "1. milk 2.choclate 3.cream"
+             "name": "chocolate",
+             "recipe": "1. milk 2.choclate 3.cream"
          },
          {
             "id": 2,
             "userId": 2,
             "typeId": 2,
-            "ricipe": "1. milk 2.blueberries 3.cream"
+            "name": "blueberry",
+            "recipe": "1. milk 2.blueberries 3.cream"
         },
         {
             "id": 3,
             "userId": 3,
             "typeId": 3,
-            "ricipe": "1. lactose milk 2.fudge 3.cream"
+            "name": "cookie dough",
+            "recipe": "1. lactose milk 2.fudge 3.cream"
         }
     ],
 
-    "type":
+    "types":
     [
         {
             "id": 1,
