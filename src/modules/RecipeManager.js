@@ -11,5 +11,14 @@ export default {
         return fetch(`${remoteURL}/recipes/${id}`, {
             method: "DELETE"
         }).then(result => result.json())
-    }
+    },
+    post(newRecipe) {
+        return fetch(`${remoteURL}/recipes`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newRecipe)
+    }).then(data => data.json())
+  }
 }

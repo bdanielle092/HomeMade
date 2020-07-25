@@ -1,17 +1,22 @@
 /* the color and size of the cards   */
 .card {
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; 
     background: whitesmoke;
     margin-bottom: 2em;
-    flex: 0 1 24%;
+
 }
 .card-content {
     text-align: center;
 }
 .card-recipeName{
- background-color: #FFCA3A;
+    background-color:#1982C4;
+    color: cornsilk;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: .1em;
+    width: 100%;
+    
 }
 img{
     width: 50%;

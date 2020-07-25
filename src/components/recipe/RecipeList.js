@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import RecipeCard from "./RecipeCard";
 import RecipeManager from "../../modules/RecipeManager";
+import RecipeForm from "./RecipeForm"
 
-const RecipeList = () => {
+const RecipeList = (props) => {
     const [recipes, setRecipes] = useState([])
 
     const getRecipes = () => {
@@ -22,10 +23,14 @@ const RecipeList = () => {
     }, []);
 
     return (
-    
+        <>
+        <RecipeForm
+            getRecipes={getRecipes}/>
+
         <div className="container-cards">
-            {recipes.map(recipe => <RecipeCard key={recipe.id} recipe={recipe} deleteRecipe={deleteRecipe}/> )}
+            {recipes.map(recipe => <RecipeCard key={recipe.id} recipe={recipe} deleteRecipe={deleteRecipe} getRecipes={getRecipes} {...props}/> )}
         </div>
+        </>
     )
 }
 export default RecipeList

@@ -1,8 +1,11 @@
 header{
     background-color: whitesmoke;
     border: #FFCA3A solid 3px;
+    
 }
 
 .site-title {
-    text-align: center;
+   color: #1982C4;
+   text-align: center;
+   
 }

@@ -6,7 +6,7 @@ const Banner = props => {
     return (
         <header>
             <h1 className="site-title">
-                <img src={require("./HMlogo.png")} alt="logo" />
+                Home Made
             </h1>
         </header>
     )
