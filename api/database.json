@@ -22,8 +22,6 @@
   "recipes": [
     {
       "id": 1,
-      "userId": 1,
-      "typeId": 1,
       "name": "chocolate",
       "recipe": "1. milk 2.choclate 3.cream"
     },
@@ -53,6 +51,11 @@
       "name": "cookies",
       "recipe": "1. milk 2. cookies",
       "id": 6
+    },
+    {
+      "name": "cookies",
+      "recipe": "First add 1 up of milk. Second add cookie dough. Third add sugar and ice.",
+      "id": 7
     }
   ],
   "types": [
@@ -69,24 +72,5 @@
       "typeName": "lactose"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "userId": 5,
-      "profileId": 1,
-      "comment": "That blueberry ice cream was great"
-    },
-    {
-      "id": 2,
-      "userId": 4,
-      "profileId": 2,
-      "comment": "Have you tried dark choclate ice cream"
-    },
-    {
-      "id": 3,
-      "userId": 7,
-      "profileId": 3,
-      "comment": "My sister love the lactose ice cream"
-    }
-  ]
+  "comments": []
 }

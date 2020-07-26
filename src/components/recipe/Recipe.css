@@ -5,9 +5,11 @@
     margin-bottom: 2em;
 
 }
+/* centers the text */
 .card-content {
     text-align: center;
 }
+/* for the recipe name at the top */
 .card-recipeName{
     background-color:#1982C4;
     color: cornsilk;
@@ -18,6 +20,7 @@
     width: 100%;
     
 }
+/* sizing the img */
 img{
     width: 50%;
     height: auto;

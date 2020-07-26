@@ -29,6 +29,7 @@ const RecipeEditForm = props => {
     useEffect(() => {
         RecipeManager.get(props.match.params.recipeId)
         .then(recipe => {
+            setRecipe(recipe)
             setIsLoading(false)
         });
     }, [props.match.params.recipeId]);
