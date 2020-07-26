@@ -20,5 +20,14 @@ export default {
             },
             body: JSON.stringify(newRecipe)
     }).then(data => data.json())
+  },
+  updated(editedRecipe){
+      return fetch(`${remoteURL}/recipes/${editedRecipe.id}`, {
+          method: "PUT",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(editedRecipe)
+      }).then(data => data.json())
   }
 }

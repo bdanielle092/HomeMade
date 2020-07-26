@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import RecipeManager from "../../modules/RecipeManager";
-import "./RecipeDetail.css"
+// import "./RecipeDetail.css"
 
 const RecipeDetail = props => {
     const [recipe, setRecipe] = useState({recipe: ""})

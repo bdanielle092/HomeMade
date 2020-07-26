@@ -16,6 +16,10 @@ const RecipeCard = props => {
                 <Link to={`/recipes/${props.recipe.id}`}>
                     <button>Recipe</button>
                 </Link>
+                <button type="button"
+                onClick={() => props.history.push(`/recipes/${props.recipe.id}/edit`)}>
+                    Edit Recipe
+                </button>
                 <button type="button" onClick={() => props.deleteRecipe(props.recipe.id)}>Delete Recipe</button>
             </div>
         </div>

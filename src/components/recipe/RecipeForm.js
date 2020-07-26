@@ -6,16 +6,13 @@ const RecipeForm = props => {
     const [recipe, setRecipe] = useState({name: "", recipe: ""})
     const [isLoading, setIsLoading ] = useState(false)
 
-    const [showForm, setShowform] = useState(false)
+    
     
     const handleFieldChange = evt => {
         const stateToChange = {...recipe};
         stateToChange[evt.target.id] = evt.target.value;
         setRecipe(stateToChange);
     };
-    const handleclick = evt => {
-        setShowform(!showForm)
-    }
 
 
     const constructNewRecipe = evt => {
@@ -23,13 +20,12 @@ const RecipeForm = props => {
         if(recipe.name === "" || recipe.recipe === "") {
             window.alert("Please input field");
         }else {
-            setShowform(!showForm)
+            
             setIsLoading(true);
-           
             RecipeManager.post(recipe)
-            .then(() => { props.getRecipes()
-            setIsLoading(false)
-        });
+            .then(() => props.history.push("/"));
+            
+        
             
         };
     };
@@ -39,18 +35,18 @@ const RecipeForm = props => {
         <section className="section-content">
             <button type="button"
             className="btn"
-            onClick={handleclick}>
+            onChange={handleFieldChange}>
             Add Recipe
             </button>
         </section>
 
-        <form className={showForm? "show" : "hidden"}>
+             <form>
             <fieldset>
                 <div className="formgrid">
                     <input 
                     type="text"
                     required
-                    OnChange={handleFieldChange}
+                    onChange={handleFieldChange}
                     id="name"
                     placeholder=" Recipe Name"
                     />
@@ -59,7 +55,7 @@ const RecipeForm = props => {
                     <input
                     type="text"
                     required
-                    OnChange={handleFieldChange}
+                    onChange={handleFieldChange}
                     id="recipe"
                     placeholder="Recipe"
                     />

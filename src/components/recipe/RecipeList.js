@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import RecipeCard from "./RecipeCard";
 import RecipeManager from "../../modules/RecipeManager";
-import RecipeForm from "./RecipeForm"
+
 
 const RecipeList = (props) => {
     const [recipes, setRecipes] = useState([])
@@ -24,11 +24,21 @@ const RecipeList = (props) => {
 
     return (
         <>
-        <RecipeForm
-            getRecipes={getRecipes}/>
+        <section className="section-content">
+            <button type="button"
+            className="btn"
+            onClick={() => {props.history.push("/recipes/new")}}>
+            Add Recipe
+            </button>
+        </section>
 
         <div className="container-cards">
-            {recipes.map(recipe => <RecipeCard key={recipe.id} recipe={recipe} deleteRecipe={deleteRecipe} getRecipes={getRecipes} {...props}/> )}
+            {recipes.map(recipe => <RecipeCard 
+            key={recipe.id} 
+            recipe={recipe} 
+            deleteRecipe={deleteRecipe} 
+            getRecipes={getRecipes} 
+            {...props}/> )}
         </div>
         </>
     )
