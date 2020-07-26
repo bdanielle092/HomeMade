@@ -1,0 +1,48 @@
+/* the color and size of the cards   */
+.card {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+    background: whitesmoke;
+    margin-bottom: 2em;
+
+}
+/* centers the text */
+.card-content {
+    text-align: center;
+}
+/* for the recipe name at the top */
+.card-recipeName{
+    background-color:#1982C4;
+    color: cornsilk;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: .1em;
+    width: 100%;
+    
+}
+/* sizing the img */
+img{
+    width: 50%;
+    height: auto;
+    padding-top: 1em;
+    
+}
+
+/* color and size of the buttons */
+.card button {
+    background-color:#1982C4;
+    border: none;
+    color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: .5em;
+    border-radius: 2px;
+    margin: .1em;
+    width: 100%;
+  }
+  /* color on buttons turn blue when you hover over them  */
+  .card button:hover {
+    background-color: #FFCA3A;
+  }
