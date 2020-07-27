@@ -2,7 +2,7 @@ import {Route} from "react-router-dom";
 import React from "react";
 import RecipeList from "./recipe/RecipeList"
 import Banner from "./banner/Banner";
-// import "/Dashboard.css";
+
 
 const Dashboard = (props) => {
    
@@ -22,11 +22,6 @@ const Dashboard = (props) => {
 
                     </>
                 }}/>
-
-          
-
-
-
 
         </React.Fragment>
     )

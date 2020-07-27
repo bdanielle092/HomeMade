@@ -17,60 +17,54 @@
       "username": "faith33",
       "email": "faith@home.com",
       "password": "faith!"
+    },
+    {
+      "id": 4,
+      "username": "test",
+      "email": "test@home",
+      "password": "test"
     }
   ],
   "recipes": [
     {
       "id": 1,
-      "name": "chocolate",
+      "userId": 1,
+      "typeId": 1,
       "recipe": "1. milk 2.choclate 3.cream"
     },
     {
       "id": 2,
-      "name": "cookies",
-      "recipe": "1. milk 2. cookies"
+      "userId": 2,
+      "typeId": 2,
+      "recipe": "1. milk 2.blueberries 3.cream"
     },
     {
       "id": 3,
       "userId": 3,
       "typeId": 3,
-      "name": "cookie dough",
       "recipe": "1. lactose milk 2.fudge 3.cream"
-    },
-    {
-      "name": "cookie dough",
-      "recipe": "1. milk 2. cookie dough ",
-      "id": 4
-    },
-    {
-      "name": "cookies",
-      "recipe": "1. milk 2. cookies",
-      "id": 5
-    },
-    {
-      "name": "cookies",
-      "recipe": "1. milk 2. cookies",
-      "id": 6
-    },
-    {
-      "name": "cookies",
-      "recipe": "First add 1 up of milk. Second add cookie dough. Third add sugar and ice.",
-      "id": 7
     }
   ],
   "types": [
     {
       "id": 1,
-      "typeName": "choclate"
+      "typeName": "regular"
     },
     {
       "id": 2,
-      "typeName": "blueberry"
+      "typeName": "fruit"
     },
     {
       "id": 3,
       "typeName": "lactose"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": 2,
+      "userId": 4,
+      "profileId": 2,
+      "comment": "Have you tried dark choclate ice cream"
+    }
+  ]
 }

@@ -4,11 +4,18 @@ import DashBoard from "./Dashboard";
 import RecipeEditForm from "./recipe/RecipeEditForm";
 import RecipeDetails from "./recipe/RecipeDetails";
 import RecipeForm from "./recipe/RecipeForm";
+import Home from "./home/Home";
 
 
 const ApplicationViews = () => {
     return (
-        <React.Fragment>
+        
+        <React.Fragment> 
+            <Route exact path="/"
+            render={props => {
+                return<Home {...props} />
+            }}/>
+            
             <Route exact
             path="/"
             render={props => {

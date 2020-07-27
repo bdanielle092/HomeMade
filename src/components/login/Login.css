@@ -1,0 +1,5 @@
+/* hides form once you are logged in  */
+.hidden{
+    display: none;
+}
+
