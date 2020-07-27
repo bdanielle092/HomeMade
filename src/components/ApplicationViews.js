@@ -4,6 +4,7 @@ import DashBoard from "./Dashboard";
 import RecipeEditForm from "./recipe/RecipeEditForm";
 import RecipeDetails from "./recipe/RecipeDetails";
 import RecipeForm from "./recipe/RecipeForm";
+import CommentForm from "./comments/CommentForm";
 import Home from "./home/Home";
 
 
@@ -22,7 +23,7 @@ const ApplicationViews = () => {
                 return<DashBoard />
             }}
             />
-           
+           {/* recipe cards */}
            <Route exact path="/recipes/:recipeId(\d+)/edit" render={(props) => {
                return <RecipeEditForm {...props} />
            }}/>
@@ -32,6 +33,12 @@ const ApplicationViews = () => {
             }} />
               <Route exact path="/recipes/new" render={(props) => {
                 return <RecipeForm {...props} />
+           }} />
+
+           {/* comments */}
+
+           <Route exact path="/comments/new" render={(props) => {
+               return <CommentForm {...props} />
            }} />
       
      

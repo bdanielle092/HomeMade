@@ -2,6 +2,7 @@ import {Route} from "react-router-dom";
 import React from "react";
 import RecipeList from "./recipe/RecipeList"
 import Banner from "./banner/Banner";
+import CommentList from "./comments/CommentList";
 
 
 const Dashboard = (props) => {
@@ -18,6 +19,9 @@ const Dashboard = (props) => {
                     </div>
                     <div>
                         <RecipeList {...props}/>
+                    </div>
+                    <div>
+                        <CommentList {...props}/>
                     </div>
 
                     </>
