@@ -72,7 +72,7 @@ const Login = props => {
                     >Login</button>
                     <div className="register"> &nbsp;
         <Link to="/register"> Register a new account </Link>
-        </div>
+     </div>
         
         </fieldset>
         </form>

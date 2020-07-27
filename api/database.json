@@ -67,9 +67,7 @@
   "comments": [
     {
       "id": 1,
-      "userId": 5,
-      "profileId": 1,
-      "comment": "That blueberry ice cream was great"
+      "comment": "That blueberry ice cream was awesome"
     },
     {
       "id": 2,
@@ -84,8 +82,8 @@
       "comment": "My sister love the lactose ice cream"
     },
     {
-      "comment": "hi",
-      "id": 4
+      "id": 4,
+      "comment": "how was the strawberry ice cream ?"
     }
   ]
 }

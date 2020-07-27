@@ -15,6 +15,15 @@ export default {
             },
             body: JSON.stringify(newComment)
         }).then(data => data.json())
-    }
+    },
+    update(editedComment) {
+        return fetch(`${remoteURL}/comments/${editedComment.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(editedComment)
+        }).then(data => data.json());
+      }
 
 }

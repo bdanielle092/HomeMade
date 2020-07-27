@@ -27,7 +27,7 @@ const CommentList = (props) => {
             </button>
         </section>
         <div className="container-card">
-            {comments.map(comment => <CommentCard key={comment.id} comment={comment} />)}
+            {comments.map(comment => <CommentCard key={comment.id} comment={comment} {...props} />)}
         </div>
          </>
     );
