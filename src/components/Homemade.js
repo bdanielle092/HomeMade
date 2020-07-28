@@ -10,12 +10,13 @@ const Homemade = () => {
        sessionStorage.setItem("credentails", userId);
        setHasUser(isAuthenicated());
    }
+//    if user is authenicated take them to dashboard
     if(isAuthenicated()){   
         return (
         <React.Fragment>
           <ApplicationViews hasUser={hasUser} setUser={setUser} />
           </React.Fragment>
-        
+        // else take them to login page
       )}else {
           return(
               <>

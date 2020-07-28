@@ -18,12 +18,14 @@ const Login = props => {
     // const handleClick = (evt) => {
     // setShowForm(!showForm)
     // }
-//   checking to make sure credentails are right 
+//   1. if username or password are empty fill out fileds
+// 2.if user is has an account and is authenticated go to dashboard
+// 3. if user doesn't have an account, please create an account 
     const handleLogin = (e) => {
         e.preventDefault();
         UserManager.searchUser(credentials.username).then((existingUser) => {
             if(!credentials.password || !credentials.username){
-                window.alert("Please fill out user name and password") 
+                window.alert("Please fill out username and password") 
              }else if (credentials.password === existingUser[0].password) {
                  props.setUser(existingUser[0].id);
                 //  props.history.push("/")
@@ -31,21 +33,7 @@ const Login = props => {
                  window.alert("no match, please create an account")
              }
         })
-    //    .then(users => {
-    //        users.find(user => {
-    //            if(user.username === credentials.user && user.password === credentials.user){
-    //                loginAccepted = true
-    //                sessionStorage.setItem("credentials", JSON.stringify(credentials))
-    //                sessionStorage.setItem("activeUser", user.id)
-    //                props.setUser(credentials)
-    //                props.history.push("/")
-
-    //            }
-            //    if false alerts you that input fields are wrong
-    //            if(loginAccepted === false)
-    //            window.alert("Incorrect username or password")
-    //        })
-    //    })
+ 
     }
     
     // login form 
@@ -54,7 +42,7 @@ const Login = props => {
         <form onSubmit={handleLogin}>
 
         <fieldset>
-            <h3>Please sign in </h3>
+        
             
             <div className="formgrid">
                 <input onChange={handleFieldChange}
@@ -76,7 +64,6 @@ const Login = props => {
            
             <button type="submit" 
                     id="login" 
-                    // onClick={handleClick}
                     >Login</button>
                     <div className="register"> &nbsp;
         <Link to="/register"> Register a new account </Link>

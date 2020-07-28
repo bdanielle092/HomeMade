@@ -11,7 +11,7 @@ import CommentEditForm from "./comments/CommentEditForm";
 
 const ApplicationViews = (props) => {
 // these are props that are being passed down on homemade
-// its just a shorting way of saying props hasUser
+// its just a shorter way of saying props hasUser
     const hasUser = props.hasUser;
     const setUser = props.setUser;
     // we are building an empty var so we can push whatever user is logged in 

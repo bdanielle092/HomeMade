@@ -42,7 +42,7 @@ const Register = props => {
         <form onSubmit={handleRegister}>
 
         <fieldset>
-            <h3>Please Register </h3>
+      
             
             <div className="formgrid">
                 <input onChange={handleFieldChange}
