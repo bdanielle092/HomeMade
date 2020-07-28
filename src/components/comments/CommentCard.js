@@ -4,16 +4,22 @@ import "./Comment.css";
 const CommentCard = props => {
     
     return(
-        <div className="card">
-            <div className="card-content">
+       
+        <div className="comment-box">
+        <div className="comment">
+            <div className="comment-content">
                 <span className="card-comment">{props.comment.comment}</span>
-                <button 
+                
+                <button className="alignRight"
                 type="button"
                  onClick={() => props.history.push(`/comments/${props.comment.id}/edit`)}>
                  Edit
                 </button>
+                
             </div>
         </div>
+        </div>
+    
     )
 }
 

@@ -1,12 +1,13 @@
 import {Route, Redirect} from "react-router-dom";
 import React from "react";
-import DashBoard from "./Dashboard";
+import Dashboard from "./Dashboard";
 import RecipeEditForm from "./recipe/RecipeEditForm";
 import RecipeDetails from "./recipe/RecipeDetails";
 import RecipeForm from "./recipe/RecipeForm";
 import CommentForm from "./comments/CommentForm";
 import Home from "./home/Home";
 import CommentEditForm from "./comments/CommentEditForm";
+import Register from "./login/Register";
 
 
 const ApplicationViews = (props) => {
@@ -28,10 +29,14 @@ const ApplicationViews = (props) => {
                 return<Home {...props} hasUser={hasUser} setUser={setUser} />
             }}/>
             
+        <Route path="/register" render={props => {
+              return <Register {...props} />
+        }}/>
+            
             <Route exact
-            path="/"
+            path="/Dashboard"
             render={props => {
-                return<DashBoard />
+                return<Dashboard {...props} />
             }}
             /> 
            {/* recipe cards */}

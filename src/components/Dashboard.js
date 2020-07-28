@@ -4,16 +4,14 @@ import RecipeList from "./recipe/RecipeList"
 import Banner from "./banner/Banner";
 import CommentList from "./comments/CommentList";
 
-
+// this is displaying the main card to the dashboard
 const Dashboard = (props) => {
    
 
     return (
         <React.Fragment>
-            <Route 
-                exact path="/"
-                render={props => {
-                    return <>
+          
+                    
                     <div className="Banner">
                         <Banner {...props}/>
                     </div>
@@ -24,8 +22,8 @@ const Dashboard = (props) => {
                         <CommentList {...props}/>
                     </div>
 
-                    </>
-                }}/>
+                
+            
 
         </React.Fragment>
     )

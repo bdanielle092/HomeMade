@@ -12,11 +12,7 @@ const Register = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setCredentails(stateToChange)
     };
-//    hides the login form
-    const [showForm, setShowForm] = useState(true)
-    const handleClick = (evt) => {
-    setShowForm(!showForm)
-    }
+
 
     // checks to make sure the fields are filled out and alerts you if not
     const handleRegister = evt => {
@@ -38,12 +34,11 @@ const Register = props => {
 
     // Register form 
     return (
-        <div className={ showForm ? "showForm": "hidden"}>
+        
         <form onSubmit={handleRegister}>
 
         <fieldset>
       
-            
             <div className="formgrid">
                 <input onChange={handleFieldChange}
                 type="username"
@@ -72,12 +67,12 @@ const Register = props => {
            
             <button type="submit" 
                     id="login" 
-                    onClick={handleClick}
+                    onClick={handleRegister}
                     >Register</button>
         
         </fieldset>
         </form>
-        </div>
+        
     );
 };
 

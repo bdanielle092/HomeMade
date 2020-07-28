@@ -19,7 +19,7 @@ const CommentForm = props => {
         }else {
             setIsLoading(true);
             CommentManager.post(comment)
-            .then(() => props.history.push ("/"))
+            .then(() => props.history.push ("/Dashboard"))
         }
     };
 

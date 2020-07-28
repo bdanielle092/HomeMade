@@ -23,7 +23,7 @@ const RecipeEditForm = props => {
         };
 
         RecipeManager.updated(editedRecipe)
-        .then(() => props.history.push("/"))
+        .then(() => props.history.push("/Dashboard"))
     }
 
     useEffect(() => {
@@ -52,12 +52,13 @@ const RecipeEditForm = props => {
                     <input
                     type="text"
                     required
-                    className="from-control"
+                    className="form-control"
                     onChange={handleFieldChange}
                     id="recipe"
                     value={recipe.recipe}
                     />
                     <label htmlFor="recipe">Recipe</label>
+
                     </div>
                     <div className="alignRight">
                         <button

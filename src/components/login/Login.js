@@ -13,11 +13,7 @@ const Login = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setCredentails(stateToChange)
     };
-//    hides the login form
-    // const [showForm, setShowForm] = useState(true)
-    // const handleClick = (evt) => {
-    // setShowForm(!showForm)
-    // }
+
 //   1. if username or password are empty fill out fileds
 // 2.if user is has an account and is authenticated go to dashboard
 // 3. if user doesn't have an account, please create an account 
@@ -28,7 +24,7 @@ const Login = props => {
                 window.alert("Please fill out username and password") 
              }else if (credentials.password === existingUser[0].password) {
                  props.setUser(existingUser[0].id);
-                //  props.history.push("/")
+                 props.history.push("/Dashboard")
              }else {
                  window.alert("no match, please create an account")
              }
@@ -38,7 +34,6 @@ const Login = props => {
     
     // login form 
     return (
-        // <div className={ showForm ? "showForm": "hidden"}>
         <form onSubmit={handleLogin}>
 
         <fieldset>
@@ -71,7 +66,7 @@ const Login = props => {
         
         </fieldset>
         </form>
-        // </div>
+        //  </div>
     );
 };
 

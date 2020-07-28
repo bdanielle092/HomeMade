@@ -16,8 +16,8 @@ const Home = (props) => {
   }
     return (
      <>
-      <Login hasUser={hasUser} setUser={setUser} />
-      <Register />
+      <Login hasUser={hasUser} setUser={setUser} {...props}/>
+    
       </>
     )
         

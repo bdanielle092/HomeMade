@@ -22,7 +22,7 @@ const CommentEditForm = props => {
         };
 
         CommentManager.update(editedComment)
-        .then(() => props.history.push("/"))
+        .then(() => props.history.push("/Dashboard"))
     }
 
     useEffect(() => {

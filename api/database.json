@@ -28,26 +28,28 @@
   "recipes": [
     {
       "id": 1,
-      "userId": 1,
-      "typeId": 1,
+      "name": "oreo",
       "recipe": "1. milk 2.choclate 3.cream"
     },
     {
       "id": 2,
-      "userId": 2,
-      "typeId": 2,
+      "name": "chocolate  chip cookie dough ",
       "recipe": "1. milk 2.blueberries 3.cream"
     },
     {
       "id": 3,
-      "userId": 3,
-      "typeId": 3,
+      "name": "blueberry ",
       "recipe": "1. lactose milk 2.fudge 3.cream"
     },
     {
-      "id": 4,
-      "name": "cookie",
-      "recipe": "1. milk 2. cookies"
+      "name": "cookies",
+      "recipe": "1. milk 2. cookies",
+      "id": 4
+    },
+    {
+      "name": "strawberry ",
+      "recipe": "1. milk 2. strawberries",
+      "id": 5
     }
   ],
   "types": [
@@ -76,14 +78,20 @@
       "comment": "Have you tried dark choclate ice cream"
     },
     {
-      "id": 3,
-      "userId": 7,
-      "profileId": 3,
-      "comment": "My sister love the lactose ice cream"
-    },
-    {
       "id": 4,
       "comment": "how was the strawberry ice cream ?"
+    },
+    {
+      "comment": "this is the best ice cream",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "comment": "hello"
+    },
+    {
+      "comment": "what's happening ?",
+      "id": 7
     }
   ]
 }

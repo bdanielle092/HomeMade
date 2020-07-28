@@ -23,7 +23,7 @@ const RecipeForm = props => {
             
             setIsLoading(true);
             RecipeManager.post(recipe)
-            .then(() => props.history.push("/"));
+            .then(() => props.history.push("/Dashboard"));
             
         
             

@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Capstone Project
 
-## Available Scripts
+Name:  Faith Magras
+Capstone Repo on Github: 
+https://github.com/bdanielle092/HomeMade
 
-In the project directory, you can run:
+Overview of Application: 
+I want to share my ice cream recipes and get feedback on the ice cream 
+Cooks/Ice cream lovers 
+The User can share their recipes and give feedback in the comment area. Only an active user can edit their comment
+I want to build this app to be able to get feedback about ice cream we made and learn other techniques.
 
-### `npm start`
+Features included in MVP Definition: 
+User-specific CRUD for ice cream recipes
+User-specific viewing other users pages and leaving comments
+User-specific you can search other users and view their page
+User-specific user can edit their comments but not other users
+ 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Features that are Stretch Goals:
+Be able to search for ice cream recipes ex. Recipes with chocolate 
+Ability to filter the ice cream recipes by type ex. Fruit ice cream 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+Planning Links
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Technology Stack:  Javascript  CSS React
 
-### `npm run build`
+ERD:  https://dbdiagram.io/d/5eea4a869ea313663b3ab234
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User Stories on Github: 
+Given that I am a cook I want to be able to share my recipes and then  get feedback
+Given that I am a cook I would also like to see other people's ideas and  then be able to try them.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Moqup/Wireframes: https://app.moqups.com/7sLURLPjhw/edit/page/ad64222d5
+ReadMe: https://docs.google.com/document/d/1zB-bvKEFKf3cxz-SLusQSbpmDFh465goGHZ0_C3FioY/edit
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Other Research
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Ideas for displaying pictures:  https://www.tillamook.com/ice-cream.html?
+Pictures: Cloudinary 
+CSS: https://coolors.co/
+Logo: https://www.freelogodesign.org/

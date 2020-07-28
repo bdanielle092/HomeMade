@@ -1,16 +1,16 @@
-import React, {useSate}  from 'react';
+import React, {useState}  from 'react';
 import './App.css';
 
 
 
 function App() {
   const [image, setImage] = useState('')
-  const [loading, isLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const uploadImage = async e => {
     const files = e.target.files
     const data = new FormData()
-      data.append('file', flie-[0])
+      data.append('file', files[0])
       data.append('upload_preset', "icecream")
       setLoading(true)
       const res = await fetch(
@@ -21,7 +21,7 @@ function App() {
         }
       )
     const file = await res.json()
-    
+    // this will save your photo
     setImage(file.secure_url)
     setLoading(false)
   }
