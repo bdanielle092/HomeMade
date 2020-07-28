@@ -9,13 +9,23 @@ import Home from "./home/Home";
 import CommentEditForm from "./comments/CommentEditForm";
 
 
-const ApplicationViews = () => {
+const ApplicationViews = (props) => {
+// these are props that are being passed down on homemade
+// its just a shorting way of saying props hasUser
+    const hasUser = props.hasUser;
+    const setUser = props.setUser;
+    // we are building an empty var so we can push whatever user is logged in 
+    let userId ="";
+    // this hasUser is checking they are authenicated 
+    if(hasUser) {
+        userId = JSON.parse(sessionStorage.getItem("credentials"));
+    }
     return (
         
         <React.Fragment> 
             <Route exact path="/"
             render={props => {
-                return<Home {...props} />
+                return<Home {...props} hasUser={hasUser} setUser={setUser} />
             }}/>
             
             <Route exact
@@ -23,7 +33,7 @@ const ApplicationViews = () => {
             render={props => {
                 return<DashBoard />
             }}
-            />
+            /> 
            {/* recipe cards */}
            <Route exact path="/recipes/:recipeId(\d+)/edit" render={(props) => {
                return <RecipeEditForm {...props} />

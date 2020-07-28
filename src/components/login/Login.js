@@ -14,35 +14,43 @@ const Login = props => {
         setCredentails(stateToChange)
     };
 //    hides the login form
-    const [showForm, setShowForm] = useState(true)
-    const handleClick = (evt) => {
-    setShowForm(!showForm)
-    }
+    // const [showForm, setShowForm] = useState(true)
+    // const handleClick = (evt) => {
+    // setShowForm(!showForm)
+    // }
 //   checking to make sure credentails are right 
     const handleLogin = (e) => {
         e.preventDefault();
-       let loginAccepted = false
-       UserManager.getAllUsers()
-       .then(users => {
-           users.find(user => {
-               if(user.username === credentials.user && user.password === credentials.user){
-                   loginAccepted = true
-                   sessionStorage.setItem("credentials", JSON.stringify(credentials))
-                   sessionStorage.setItem("activeUser", user.id)
-                   props.setUser(credentials)
-                   props.history.push("/")
+        UserManager.searchUser(credentials.username).then((existingUser) => {
+            if(!credentials.password || !credentials.username){
+                window.alert("Please fill out user name and password") 
+             }else if (credentials.password === existingUser[0].password) {
+                 props.setUser(existingUser[0].id);
+                //  props.history.push("/")
+             }else {
+                 window.alert("no match, please create an account")
+             }
+        })
+    //    .then(users => {
+    //        users.find(user => {
+    //            if(user.username === credentials.user && user.password === credentials.user){
+    //                loginAccepted = true
+    //                sessionStorage.setItem("credentials", JSON.stringify(credentials))
+    //                sessionStorage.setItem("activeUser", user.id)
+    //                props.setUser(credentials)
+    //                props.history.push("/")
 
-               }
+    //            }
             //    if false alerts you that input fields are wrong
-               if(loginAccepted === false)
-               window.alert("Incorrect username or password")
-           })
-       })
+    //            if(loginAccepted === false)
+    //            window.alert("Incorrect username or password")
+    //        })
+    //    })
     }
     
     // login form 
     return (
-        <div className={ showForm ? "showForm": "hidden"}>
+        // <div className={ showForm ? "showForm": "hidden"}>
         <form onSubmit={handleLogin}>
 
         <fieldset>
@@ -68,7 +76,7 @@ const Login = props => {
            
             <button type="submit" 
                     id="login" 
-                    onClick={handleClick}
+                    // onClick={handleClick}
                     >Login</button>
                     <div className="register"> &nbsp;
         <Link to="/register"> Register a new account </Link>
@@ -76,7 +84,7 @@ const Login = props => {
         
         </fieldset>
         </form>
-        </div>
+        // </div>
     );
 };
 
