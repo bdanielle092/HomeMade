@@ -33,3 +33,8 @@
   display: flex;
   justify-content: right;
 }
+.alignRight{
+  display: flex;
+  justify-content: end;
+  padding-left: 2em;
+}

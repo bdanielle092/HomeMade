@@ -3,10 +3,9 @@ import RecipeManager from  "../../modules/RecipeManager";
 import "./RecipeForm.css";
 
 const RecipeForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: ""})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""})
     const [isLoading, setIsLoading ] = useState(false)
 
-    
     
     const handleFieldChange = evt => {
         const stateToChange = {...recipe};
@@ -50,7 +49,7 @@ const RecipeForm = props => {
                     id="name"
                     placeholder=" Recipe Name"
                     />
-                    <label html="name">Name</label>
+                    <label htmlFor="name">Name</label>
 
                     <input
                     type="text"
@@ -59,7 +58,17 @@ const RecipeForm = props => {
                     id="recipe"
                     placeholder="Recipe"
                     />
-                    <label html="recipe">Recipe</label>
+                    <label htmlFor="recipe">Recipe</label>
+
+                    <input
+                    type="text"
+                    required
+                    onChange={handleFieldChange}
+                    id="url"
+                    placeholder="url"
+                    />
+                    <label htmlFor="url">url</label>
+
 
                 </div>
                 <div className="alignRight">

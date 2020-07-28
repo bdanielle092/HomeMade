@@ -3,7 +3,7 @@ import RecipeManager from "../../modules/RecipeManager";
 
 
 const RecipeEditForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: ""});
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""});
     const [isLoading, setIsLoading ] = useState(false);
 
     const handleFieldChange = evt => {
@@ -19,7 +19,8 @@ const RecipeEditForm = props => {
         const editedRecipe = {
             id: props.match.params.recipeId,
             name: recipe.name,
-            recipe: recipe.recipe
+            recipe: recipe.recipe,
+            url: recipe.url
         };
 
         RecipeManager.updated(editedRecipe)
@@ -58,6 +59,16 @@ const RecipeEditForm = props => {
                     value={recipe.recipe}
                     />
                     <label htmlFor="recipe">Recipe</label>
+
+                    <input 
+                    type="text"
+                    required
+                    className="form-control"
+                    onChange={handleFieldChange}
+                    id="url"
+                    value={recipe.url}
+                    />
+                    <label htmlFor="url">URL</label>
 
                     </div>
                     <div className="alignRight">

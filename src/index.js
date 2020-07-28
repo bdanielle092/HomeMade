@@ -8,7 +8,6 @@ import Icecream from "./Icecream";
 ReactDOM.render(
   <Router>
     <Homemade />
-    <Icecream />
   </Router>,
   document.getElementById('root')
 );

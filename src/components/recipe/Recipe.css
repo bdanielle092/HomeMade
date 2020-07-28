@@ -3,8 +3,10 @@
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
     background: whitesmoke;
     margin-bottom: 2em;
-
+    width: 50%;
+  
 }
+
 /* centers the text */
 .card-content {
     text-align: center;
@@ -22,8 +24,8 @@
 }
 /* sizing the img */
 img{
-    width: 50%;
-    height: auto;
+    width: 30%;
+    height: 30%;
     padding-top: 1em;
     
 }

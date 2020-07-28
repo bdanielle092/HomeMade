@@ -1,7 +1,8 @@
 import React from "react";
-
 import Login from "../login/Login";
 import Register from "../login/Register";
+// import Banner from "./banner/Banner";
+
 
 const Home = (props) => {
   //// these are props that are being passed down on homemade
@@ -16,6 +17,8 @@ const Home = (props) => {
   }
     return (
      <>
+
+      {/* <Banner {...props} /> */}
       <Login hasUser={hasUser} setUser={setUser} {...props}/>
     
       </>
