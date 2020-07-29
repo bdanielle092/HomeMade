@@ -4,7 +4,29 @@ import RecipeManager from "../../modules/RecipeManager";
 
 const RecipeEditForm = props => {
     const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""});
+    const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false);
+
+    const uploadImage = async e => {
+        const files = e.target.files
+        const data = new FormData()
+        data.append('file', files[0])
+        data.append('upload_preset', "icecream")
+          setIsLoading(true)
+          const res = await fetch(
+            'https://api.cloudinary.com/v1_1/dszckhcld/image/upload', 
+            {
+              method: 'POST',
+              body: data
+            }
+          )
+        const file = await res.json()
+        // this will save your photo
+        setImage(file.secure_url)
+        setRecipe({...recipe, url: file.secure_url})
+        RecipeManager.getAll()
+        setIsLoading(false)
+      }
 
     const handleFieldChange = evt => {
         const stateToChange = {...recipe};
@@ -21,6 +43,7 @@ const RecipeEditForm = props => {
             name: recipe.name,
             recipe: recipe.recipe,
             url: recipe.url
+       
         };
 
         RecipeManager.updated(editedRecipe)
@@ -61,14 +84,12 @@ const RecipeEditForm = props => {
                     <label htmlFor="recipe">Recipe</label>
 
                     <input 
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleFieldChange}
-                    id="url"
-                    value={recipe.url}
+                    type="file"
+                    name="file"
+                    id="file"
+                    onChange={uploadImage}
+                    placeholder="upload"
                     />
-                    <label htmlFor="url">URL</label>
 
                     </div>
                     <div className="alignRight">

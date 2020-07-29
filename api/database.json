@@ -27,16 +27,10 @@
   ],
   "recipes": [
     {
-      "id": 3,
-      "name": "blackberry ",
-      "recipe": "1. lactose milk 2.fudge 3.cream",
-      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1595962728/ice%20cream%20pictures/photo-1488900128323-21503983a07e_n9irs2.jpg"
-    },
-    {
-      "name": "strawberry ",
+      "id": 8,
+      "name": "blueberry ",
       "recipe": "1. milk 2. strawberries",
-      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1595962304/ice%20cream%20pictures/photo-1556682851-c4580670113a_cjozoa.jpg",
-      "id": 8
+      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1595988565/icecream/ot1fqb9i9r2ocbrd2jr7.webp"
     },
     {
       "id": 9,
@@ -51,10 +45,10 @@
       "id": 10
     },
     {
-      "id": 11,
-      "name": "blueberry ",
-      "recipe": "1. milk 2. blueberry",
-      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1595962728/ice%20cream%20pictures/photo-1488900128323-21503983a07e_n9irs2.jpg"
+      "id": 12,
+      "name": "cookies",
+      "recipe": "1. milk 2. cookies",
+      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1595987304/icecream/euwjpvlyxzzke9p6gfoe.webp"
     }
   ],
   "types": [
@@ -74,7 +68,7 @@
   "comments": [
     {
       "id": 1,
-      "comment": "That blueberry ice cream was awesome"
+      "comment": "That blueberry ice cream was great"
     },
     {
       "id": 2,
@@ -97,6 +91,10 @@
     {
       "comment": "what's happening ?",
       "id": 7
+    },
+    {
+      "comment": "WOW",
+      "id": 8
     }
   ]
 }

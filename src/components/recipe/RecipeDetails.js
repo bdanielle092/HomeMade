@@ -3,7 +3,7 @@ import RecipeManager from "../../modules/RecipeManager";
 // import "./RecipeDetail.css"
 
 const RecipeDetail = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", })
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""})
 
    useEffect(() => {
        RecipeManager.get(props.recipeId)
@@ -11,18 +11,18 @@ const RecipeDetail = props => {
            setRecipe({
                name: recipe.name,
                recipe: recipe.recipe,
-            //    url: recipe.url
+               url: recipe.url
            });
        });
    }, [props.recipeId]);
 
    return (
-       <div className="card">
-           <div className="card-content">
+       <div className="recipe">
+           <div className="recipe-content">
            <h3>Name: {recipe.name}</h3>
-               {/* <picture>
-               <img src={props.recipe.url} alt="ice cream pictures" />
-               </picture> */}
+               <picture>
+               <img src={recipe.url} alt="ice cream pictures" />
+               </picture>
                <p>Recipe: {recipe.recipe}</p>
 
            </div>
