@@ -20,7 +20,7 @@ const Homemade = () => {
       )}else {
           return(
               <>
-              <h1>Hi</h1>
+              
               <ApplicationViews hasUser={hasUser} setUser={setUser} />
               </>
           )

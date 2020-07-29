@@ -9,10 +9,9 @@ export default {
     },
 
     delete(id) {
-        console.log("will this work ")
         return fetch(`${remoteURL}/recipes/${id}`, {
             method: "DELETE"
-        })
+        }).then(result => result.json())
     },
     post(newRecipe) {
         return fetch(`${remoteURL}/recipes`, {
