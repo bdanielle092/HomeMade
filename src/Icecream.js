@@ -35,7 +35,7 @@ function App() {
       {loading ? (
        <h3>Loading...</h3>
       ): (
-        <img src={image} style={{width: '300'}} />
+        <img src={image} alt="img" style={{width: '300'}} />
       )}
     </div>
   );

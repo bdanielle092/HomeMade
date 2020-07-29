@@ -23,18 +23,6 @@
       "username": "test",
       "email": "test@home",
       "password": "test"
-    },
-    {
-      "username": "faith",
-      "email": "faith@house.com",
-      "password": "1234",
-      "id": 5
-    },
-    {
-      "username": "grace",
-      "email": "grace@house.com",
-      "password": "1234",
-      "id": 6
     }
   ],
   "recipes": [
@@ -67,6 +55,12 @@
       "name": "Villa Caramel ",
       "recipe": " 5 egg yolks\n 1/2 cup packed dark brown sugar, divided\n 1 3/4 cup heavy cream\n 3/4 cup whole milk\n 1/4 teaspoon kosher salt\n 2 teaspoons vanilla bean paste (may use vanilla extract if desired)\nFor the caramel\n1 cup sugar\n 3/4 cup heavy cream, warmed\n 1/8 teaspoon kosher salt\n 1 teaspoon vanilla\nIn a large Pyrex measuring cup or heatproof bowl, whisk the yolks with ¼ cup of the brown sugar. Set aside.\nIn a heavy saucepan, stir together the cream, milk, salt, and the remaining ¼ cup of brown sugar and put the pan over medium-high heat. When the mixture starts to simmer, decrease the heat.\nRemove about ½ cup of the hot cream mixture while constantly whisking the eggs, slowly drizzle the cream into the egg yolks. Repeat with another ½ cup of hot cream, then pour the egg-cream mixture back into the saucepan, whisking as you pour.\nCook the mixture carefully over medium heat, stirring constantly, until it is thickened, about 1-2 more minutes.\nStrain the custard mixture through a fine-mesh strainer into a clean container. Set the container into an ice-water bath (I fill my sink with ice cubes, then adds some water). Stir occasionally, till cool. Remove the container from the ice-water bath, cover with plastic wrap, and refrigerate\nfor at least 2 hours or overnight.\nWhile the ice cream base cools, make the caramel.\nSet the warm cream by the stove so it's at hand when you need it. Put 2 tablespoons of the sugar in a heavy saucepan over medium-high heat. When the sugar is melted around the edges and starts turn golden, stir the mixture gently and add another 2 tablespoons sugar to the pan.\nContinue to add the remaining sugar 2 tablespoons at a time, stirring frequently and allowing most of the sugar to melt before you add more. Watch carefully as the sugar darkens, stirring gently to help it melt evenly.\nWhen the bubbling slows down, gently stir in the cream to blend. If you have any hard sugar lumps, just keep the burner on low and cook till sugar melts. Stir in salt and vanilla and allow to cool to room temperature.",
       "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1596032706/icecream/qijrvruv7es9ujwv5pwu.webp"
+    },
+    {
+      "name": "chocolate",
+      "recipe": "Original recipe yields 8 servings\nIngredient Checklist\n¾ cup Sugars, granulated  \n1 cup Milk, reduced fat, fluid, 2% milkfat, with added vitamin A\n¼ teaspoon Salt, table\n2 tablespoons Cocoa, dry powder, unsweetened\n3 eaches Egg, yolk, raw, fresh\n2 ounces Bakers Choc Semi-Sweet Chocolate Bar KFT\n2 cups Cream, fluid, heavy whipping\n1 teaspoon Vanilla extract\nStep 1\nCombine sugar, milk, salt, and cocoa powder in a saucepan over medium heat, stirring constantly. Bring to a simmer. Place the egg yolks into a small bowl. Gradually stir in about 1/2 cup of the hot liquid. and return to the saucepan. Heat until thickened, but do not boil. Remove from the heat, and stir in the chopped chocolate until chocolate is melted. Pour into a chilled bowl, and refrigerate for about two hours until cold, stirring occasionally.\n\n Step 2\nWhen chocolate mixture has completely cooled, stir in the cream, and vanilla. Pour into an ice cream maker, and freeze according to manufacturer's directions.",
+      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1596061213/icecream/jyp2zxy0gmusniostvxj.webp",
+      "id": 14
     }
   ],
   "types": [
@@ -113,21 +107,6 @@
     {
       "comment": "WOW",
       "id": 8
-    },
-    {
-      "userId": null,
-      "comment": "hello",
-      "id": 9
-    },
-    {
-      "userId": null,
-      "comment": "I love ice cream ",
-      "id": 10
-    },
-    {
-      "userId": null,
-      "comment": "hey",
-      "id": 11
     }
   ]
 }

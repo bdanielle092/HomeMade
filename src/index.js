@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import {BrowserRouter as Router} from "react-router-dom";
 import Homemade from "./components/Homemade";
-import Icecream from "./Icecream";
+// import Icecream from "./Icecream";
 
 
 ReactDOM.render(
