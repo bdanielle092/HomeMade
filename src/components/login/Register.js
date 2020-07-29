@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import UserManager from "../../modules/UserManager";
 
 
 
 const Register = props => {
     const [credentials, setCredentails] = useState({username: "", email: "",  password: ""});
-
+    const [user, setUser] = useState([]);
+   
     // updates state whenever an input is edited
     const handleFieldChange = (evt) => {
         const stateToChange = {...credentials};
@@ -13,23 +14,58 @@ const Register = props => {
         setCredentails(stateToChange)
     };
 
-
-    // checks to make sure the fields are filled out and alerts you if not
+    // this is getting the ids for each item 
     const handleRegister = evt => {
+        const newUser = document.getElementById("username").value
+        const email = document.getElementById("email").value
+        const password = document.getElementById("password").value
+        const confirmPassword = document.getElementById("confirmPassword").value
+        // checking that email and username are new 
+        let checkEmail = true
+        let checkUsername = true
         evt.preventDefault();
-        if(credentials.username || credentials.email || credentials.password){
+      
+    // checks to make sure the fields are filled out and alerts you if not
+        if(newUser === "" || email === "" || password === "" || confirmPassword === ""){
             window.alert("Please fill out  fields ")
-            // create new user 
+            // checking email isn't being used 
         }else{
-          UserManager.createUser(credentials)
-        //   redirects user to login page
-          .then(() => {
-              sessionStorage.setItem("credentials", JSON.stringify(credentials))
-              props.history.push("/login")
-          });
-        }
-    };
-
+            user.forEach(useUser => {
+                if(useUser.email === email ){
+                     checkEmail = false 
+                    //  checking username isn't being used
+                     if(useUser.username === newUser){
+                         checkUsername = false
+                     }
+                    }
+            })
+            // checking the passwords are the same 
+            if(checkEmail === true ){
+                if(checkUsername === true){
+                    if(password === confirmPassword){
+                         UserManager.createUser(credentials)
+                        //   redirects user to login page
+                          .then(() => {
+                              sessionStorage.setItem("credentials", JSON.stringify(credentials))
+                              props.history.push("/")
+                          });
+                        }else {
+                            window.alert("Password don't match, please try again")
+                        }
+                    }else {
+                        window.alert("Username is already taken, please pick another name")
+                    }
+                }else{
+                    window.alert("This email is already being used, please try another email")
+                }
+            }
+        
+         
+    };  
+    // if the value changes the effect runs again 
+     useEffect(() => {
+       UserManager.getAll().then((response) => setUser(response) )
+     }, [])
    
 
     // Register form 
@@ -63,6 +99,15 @@ const Register = props => {
                 required
                 />
                 <label htmlFor="inputPassword">Password</label>   
+
+                
+                <input 
+                type="password"
+                id="confirmPassword"
+                placeholder="confirmPassword"
+                required
+                />
+                <label htmlFor="inputconfirmPassword">Comfirm Password</label>   
             </div>
            
             <button type="submit" 

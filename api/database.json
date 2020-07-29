@@ -23,6 +23,18 @@
       "username": "test",
       "email": "test@home",
       "password": "test"
+    },
+    {
+      "username": "faith",
+      "email": "faith@house.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "username": "grace",
+      "email": "grace@house.com",
+      "password": "1234",
+      "id": 6
     }
   ],
   "recipes": [

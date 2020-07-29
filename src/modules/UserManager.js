@@ -8,16 +8,15 @@ export default {
         return fetch(`${remoteURL}/users?userId=${currentUser}`).then(result => result.json())
     },
     searchUser(username) {
-        return fetch(`${remoteURL}/users/?&q=${username}`).then((result) => 
-        result.json()
-        );
+        return fetch(`${remoteURL}/users/?&q=${username}`).then((result) => result.json())
+    },
+    createUser: (newUser) => {
+        return fetch(`${remoteURL}/users`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newUser)
+        })
     }
-    // createUser: (newUser) => {
-    //     return fetch(`${remoteURL}/users`, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(newUser)
-    //     })
-    }
+}
