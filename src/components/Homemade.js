@@ -7,7 +7,7 @@ const Homemade = () => {
    const [hasUser, setHasUser] = useState(isAuthenicated());
 
    const setUser = (userId) => {
-       sessionStorage.setItem("credentails", userId);
+       sessionStorage.setItem("credentails", JSON.stringify(userId));
        setHasUser(isAuthenicated());
    }
 //    if user is authenicated take them to dashboard

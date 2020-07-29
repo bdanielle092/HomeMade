@@ -37,7 +37,7 @@ const ApplicationViews = (props) => {
             <Route exact
             path="/Dashboard"
             render={props => {
-                return<Dashboard {...props} />
+                return<Dashboard {...props} hasUser={hasUser} setUser={setUser} />
             }}
             /> 
            {/* recipe cards */}
@@ -49,13 +49,13 @@ const ApplicationViews = (props) => {
                 {...props} />
             }} />
               <Route exact path="/recipes/new" render={(props) => {
-                return <RecipeForm {...props} />
+                return <RecipeForm {...props}  />
            }} />
 
            {/* comments */}
 
            <Route exact path="/comments/new" render={(props) => {
-               return <CommentForm {...props} />
+               return <CommentForm {...props} hasUser={hasUser} setUser={setUser}/>
            }} />
 
            <Route path="/comments/:commentId(\d+)/edit" render={props => {

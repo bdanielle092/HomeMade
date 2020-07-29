@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "../login/Login";
 import Register from "../login/Register";
-// import Banner from "./banner/Banner";
+
 
 
 const Home = (props) => {
@@ -17,8 +17,8 @@ const Home = (props) => {
   }
     return (
      <>
-
-      {/* <Banner {...props} /> */}
+ 
+      
       <Login hasUser={hasUser} setUser={setUser} {...props}/>
     
       </>

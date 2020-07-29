@@ -1,12 +1,12 @@
 header{
-    background-color: whitesmoke;
+    width: 100%;
+    height: 50%;
     border: #FFCA3A solid 3px;
     
 }
 
 .site-title {
-   color: #1982C4;
+    width: 50%;
    text-align: center;
    
 }
- 
