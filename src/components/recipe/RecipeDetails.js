@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import RecipeManager from "../../modules/RecipeManager";
-// import "./RecipeDetail.css"
+import "./RecipeDetail.css"
 
 const RecipeDetail = props => {
     const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""})
@@ -23,7 +23,7 @@ const RecipeDetail = props => {
                <picture>
                <img src={recipe.url} alt="ice cream pictures" />
                </picture>
-               <p>Recipe: {recipe.recipe}</p>
+               <p className="textbox">Recipe: {recipe.recipe}</p>
 
            </div>
        </div>

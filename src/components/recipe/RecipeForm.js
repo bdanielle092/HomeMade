@@ -34,7 +34,7 @@ const RecipeForm = props => {
         const stateToChange = {...recipe};
         stateToChange[evt.target.id] = evt.target.value;
         setRecipe(stateToChange);
-    };
+    }
 
 
     const constructNewRecipe = evt => {
@@ -74,13 +74,13 @@ const RecipeForm = props => {
                     />
                     <label htmlFor="name">Name</label>
 
-                    <input
-                    type="text"
-                    required
-                    onChange={handleFieldChange}
-                    id="recipe"
-                    placeholder="Recipe"
-                    />
+                    <textarea
+                      required
+                      onChange={handleFieldChange}
+                      id="recipe"
+                      placeholder="Recipe"
+                      row="5" cols="50">
+                    </textarea>
                     <label htmlFor="recipe">Recipe</label>
 
                      <input 

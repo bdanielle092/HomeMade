@@ -73,14 +73,15 @@ const RecipeEditForm = props => {
                     />
                     <label htmlFor="name">Name</label>
 
-                    <input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleFieldChange}
-                    id="recipe"
-                    value={recipe.recipe}
-                    />
+                   
+                    <textarea
+                      required
+                      onChange={handleFieldChange}
+                      id="recipe"
+                      value={recipe.recipe}
+                      placeholder="Recipe"
+                      row="5" cols="50">
+                    </textarea>
                     <label htmlFor="recipe">Recipe</label>
 
                     <input 
