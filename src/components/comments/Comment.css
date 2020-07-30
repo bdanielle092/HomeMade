@@ -1,0 +1,40 @@
+/* the color and size of the cards   */
+.comment {
+  box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+  background: whitesmoke;
+  margin-bottom: 2em;
+
+}
+/* centers the text */
+.comment-content {
+  text-align: left;
+}
+
+/* color and size of the buttons */
+.comment button {
+  background-color:#1982C4;
+  border: none;
+  color: cornsilk;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: .5em;
+  border-radius: 2px;
+  margin: .1em;
+  width: 10%;
+}
+/* color on buttons turn blue when you hover over them  */
+.comment button:hover {
+  background-color: #FFCA3A;
+}
+/* put edit button to the right  */
+.button .alignRight {
+  display: flex;
+  justify-content: right;
+}
+.alignRight{
+  display: flex;
+  justify-content: end;
+  padding-left: 2em;
+}

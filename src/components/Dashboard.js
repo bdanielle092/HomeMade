@@ -1,32 +1,29 @@
-import {Route} from "react-router-dom";
+// import {Route} from "react-router-dom";
 import React from "react";
 import RecipeList from "./recipe/RecipeList"
 import Banner from "./banner/Banner";
-// import "/Dashboard.css";
+import CommentList from "./comments/CommentList";
 
+// this is displaying the main card to the dashboard
 const Dashboard = (props) => {
    
 
     return (
         <React.Fragment>
-            <Route 
-                exact path="/"
-                render={props => {
-                    return <>
+          
+                    
                     <div className="Banner">
                         <Banner {...props}/>
                     </div>
                     <div>
                         <RecipeList {...props}/>
                     </div>
+                    <div>
+                        <CommentList {...props}/>
+                    </div>
 
-                    </>
-                }}/>
-
-          
-
-
-
+                
+            
 
         </React.Fragment>
     )

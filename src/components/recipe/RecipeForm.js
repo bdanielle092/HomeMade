@@ -3,8 +3,30 @@ import RecipeManager from  "../../modules/RecipeManager";
 import "./RecipeForm.css";
 
 const RecipeForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: ""})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""})
+    const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false)
+
+    const uploadImage = async e => {
+        const files = e.target.files
+        const data = new FormData()
+        data.append('file', files[0])
+        data.append('upload_preset', "icecream")
+          setIsLoading(true)
+          const res = await fetch(
+            'https://api.cloudinary.com/v1_1/dszckhcld/image/upload', 
+            {
+              method: 'POST',
+              body: data
+            }
+          )
+        const file = await res.json()
+        // this will save your photo
+        setImage(file.secure_url)
+        setRecipe({...recipe, url: file.secure_url})
+        RecipeManager.getAll()
+        setIsLoading(false)
+      }
 
     
     
@@ -12,7 +34,7 @@ const RecipeForm = props => {
         const stateToChange = {...recipe};
         stateToChange[evt.target.id] = evt.target.value;
         setRecipe(stateToChange);
-    };
+    }
 
 
     const constructNewRecipe = evt => {
@@ -23,7 +45,7 @@ const RecipeForm = props => {
             
             setIsLoading(true);
             RecipeManager.post(recipe)
-            .then(() => props.history.push("/"));
+            .then(() => props.history.push("/Dashboard"));
             
         
             
@@ -50,16 +72,27 @@ const RecipeForm = props => {
                     id="name"
                     placeholder=" Recipe Name"
                     />
-                    <label html="name">Name</label>
+                    <label htmlFor="name">Name</label>
 
-                    <input
-                    type="text"
-                    required
-                    onChange={handleFieldChange}
-                    id="recipe"
-                    placeholder="Recipe"
+                    <textarea
+                      required
+                      onChange={handleFieldChange}
+                      id="recipe"
+                      placeholder="Recipe"
+                      row="5" cols="50">
+                    </textarea>
+                    <label htmlFor="recipe">Recipe</label>
+
+                     <input 
+                    type="file"
+                    name="file"
+                    id="file"
+                    onChange={uploadImage}
+                    placeholder="upload"
                     />
-                    <label html="recipe">Recipe</label>
+
+                     
+
 
                 </div>
                 <div className="alignRight">

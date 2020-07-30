@@ -7,6 +7,7 @@ export default {
     getAll(){
         return fetch(`${remoteURL}/recipes`).then(result => result.json())
     },
+
     delete(id) {
         return fetch(`${remoteURL}/recipes/${id}`, {
             method: "DELETE"

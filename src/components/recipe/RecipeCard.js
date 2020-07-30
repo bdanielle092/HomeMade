@@ -4,13 +4,14 @@ import "./Recipe.css";
 
 const RecipeCard = props => {
     return (
-        <div className="card">
-            <div className="card-content">
+        <div className="recipe">
+            <div className="recipe-content">
+               
             <h3>
-                <span className="card-recipeName">{props.recipe.name}</span>
+                <span className="recipeName">{props.recipe.name}</span>
                 </h3>
                 <picture> 
-                    <img src={require("./icecream.jpg")} alt="ice cream pic" />
+                    <img src={props.recipe.url} alt="ice cream pictures" />
                 </picture>
              
                 <Link to={`/recipes/${props.recipe.id}`}>
