@@ -35,6 +35,18 @@
       "email": "faith@house.com",
       "password": "1234",
       "id": 6
+    },
+    {
+      "username": "kelley",
+      "email": "test@home.com",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "username": "kate",
+      "email": "kate@home.com",
+      "password": "1234",
+      "id": 8
     }
   ],
   "recipes": [

@@ -22,11 +22,12 @@ const Login = props => {
         UserManager.searchUser(credentials.username).then((existingUser) => {
             if(!credentials.password || !credentials.username){
                 window.alert("Please fill out username and password") 
-             }else if (credentials.password === existingUser[0].password) {
-                 props.setUser(existingUser[0].id);
-                 props.history.push("/Dashboard")
+             }else if (existingUser.length === 0) {
+                window.alert("no match, please create an account")
              }else {
-                 window.alert("no match, please create an account")
+               props.setUser(existingUser[0].id);
+                props.history.push("/Dashboard")
+               
              }
         })
  

@@ -7,6 +7,7 @@ export default {
     getAll: () => {
         return fetch(`${remoteURL}/users?userId=${currentUser}`).then(result => result.json())
     },
+    // ?&q is looking for the username after the = and return the results
     searchUser(username) {
         return fetch(`${remoteURL}/users/?&q=${username}`).then((result) => result.json())
     },
