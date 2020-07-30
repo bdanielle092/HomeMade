@@ -39,7 +39,7 @@ const Register = props => {
                      }
                     }
             })
-            // checking the passwords are the same 
+            // checking the passwords are the same and checking the password and username are not in the database already 
             if(checkEmail === true ){
                 if(checkUsername === true){
                     if(password === confirmPassword){

@@ -12,7 +12,7 @@ const Banner = props => {
        
         <header>
             <h1 className="site-title">
-                    <img src={require("./logo_size.jpg")} alt="logo"/>
+                    Home Made
             </h1>
             
             <div className="alignRight">
