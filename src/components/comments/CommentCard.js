@@ -2,7 +2,7 @@ import React from "react";
 import "./Comment.css";
 
 const CommentCard = props => {
-    
+  
   
     return(
        
@@ -24,6 +24,7 @@ const CommentCard = props => {
         </div>
     
     )
+    
 }
 
 export default CommentCard

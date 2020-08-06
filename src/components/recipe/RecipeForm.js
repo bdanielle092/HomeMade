@@ -3,7 +3,7 @@ import RecipeManager from  "../../modules/RecipeManager";
 import "./RecipeForm.css";
 
 const RecipeForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", userId: parseInt(sessionStorage.getItem("credentails"))})
     const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false)
 
@@ -51,7 +51,7 @@ const RecipeForm = props => {
             
         };
     };
-
+  
     return (
         <>
         <section className="section-content">
@@ -106,6 +106,7 @@ const RecipeForm = props => {
         </form>
         </>
     )
+    
 }
 
 export default RecipeForm

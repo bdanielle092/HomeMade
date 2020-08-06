@@ -3,7 +3,7 @@ import CommentManager from "../../modules/CommentManager";
 
 
 const CommentEditForm = props => {
-    const [comment, setComment] = useState({comment: ""});
+    const [comment, setComment] = useState({comment: "", userId: "", postedId: parseInt(sessionStorage.getItem("credentails"))});
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
@@ -18,7 +18,9 @@ const CommentEditForm = props => {
 
         const editedComment = {
             id: props.match.params.commentId,
-            comment: comment.comment
+            comment: comment.comment,
+            userId: comment.userId,
+            postedId: comment.postedId
         };
 
         CommentManager.update(editedComment)
@@ -47,6 +49,14 @@ const CommentEditForm = props => {
                     value={comment.comment}
                     />
                     <label htmlFor="comment">Comment</label>
+
+                    <input 
+                    type="hidden"
+                    required
+                    id="userId"
+                    value={comment.userId}
+                    />
+
                     <div className="alignRight">
                         <button
                         type="button" disabled={isLoading}
