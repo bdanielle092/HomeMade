@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserManager from "../../modules/UserManager";
+import Banner from "../banner/Banner";
 
 
 
@@ -50,6 +51,10 @@ const Register = props => {
 
  // Register form 
  return (
+   <>
+    <div className="Banner">
+       <Banner {...props}/>
+    </div>
         
     <form>
 
@@ -97,7 +102,7 @@ const Register = props => {
     
     </fieldset>
     </form>
-    
+    </>
 );
  }
 

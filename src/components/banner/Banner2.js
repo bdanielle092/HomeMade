@@ -4,6 +4,10 @@ import "./Banner.css";
 const Banner = props => {
 
     
+    const handleLogout = () => {
+        sessionStorage.clear();
+        props.history.push("/")
+       }
 
     
     return(
@@ -12,9 +16,13 @@ const Banner = props => {
             <h1 className="site-title">
                     Home Made
             </h1>
-            <h2 className="site-catchpharse">
-               Ice Cream for All
-            </h2>
+            
+            <div className="alignRight">
+            <button 
+              className="button" 
+              onClick={handleLogout}> 
+              Logout </button>
+              </div>
           
    
         </header>

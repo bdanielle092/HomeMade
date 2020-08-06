@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import UserManager from "../../modules/UserManager";
 import {Link}  from "react-router-dom"
 import "./Login.css";
+import Banner from "../banner/Banner";
 
 
 const Login = props => {
@@ -35,6 +36,11 @@ const Login = props => {
     
     // login form 
     return (
+        <>
+        <div className="Banner">
+            <Banner {...props}/>
+        </div>
+
         <form onSubmit={handleLogin}>
 
         <fieldset>
@@ -67,6 +73,7 @@ const Login = props => {
         
         </fieldset>
         </form>
+        </>
        
     );
 };
