@@ -87,23 +87,20 @@
     {
       "id": 1,
       "userId": 2,
+      "postedId": 2,
       "comment": "That blueberry ice cream was great"
     },
     {
       "id": 2,
       "userId": 3,
+      "postId": 3,
       "comment": "Have you tried dark choclate ice cream"
     },
     {
       "id": 4,
       "userId": 1,
+      "postedId": 1,
       "comment": "how was the strawberry ice cream ?"
-    },
-    {
-      "userId": 1,
-      "comment": "this is faith",
-      "postedId": "1",
-      "id": 5
     }
   ]
 }
