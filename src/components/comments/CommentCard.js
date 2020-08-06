@@ -2,8 +2,9 @@ import React from "react";
 import "./Comment.css";
 
 const CommentCard = props => {
-    
-  
+    // if you are the current user you can edit, else you can only view the comment
+   const currentUserId = parseInt(sessionStorage.getItem("credentails"))
+   if(props.comment.userId === currentUserId){
     return(
        
         <div className="comment-box">
@@ -24,6 +25,18 @@ const CommentCard = props => {
         </div>
     
     )
+   }else {
+       return (
+           <div className="comment-box">
+               <div className="comment">
+                   <div className="comment-content">
+                       <span className="card-comment">{props.comment.comment}</span>
+                   </div>
+               </div>
+           </div>
+       )
+   }
+    
 }
 
 export default CommentCard

@@ -3,8 +3,8 @@ import CommentManager from "../../modules/CommentManager";
 
 
 const CommentForm = props => {
-    const userId = JSON.parse(sessionStorage.getItem("credentials"));
-    const [comment, setComment] = useState({userId: userId, comment: ""});
+    const userId = JSON.parse(sessionStorage.getItem("credentails"));
+    const [comment, setComment] = useState({userId: userId, comment: "", postedId: parseInt(sessionStorage.getItem("credentails"))});
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {

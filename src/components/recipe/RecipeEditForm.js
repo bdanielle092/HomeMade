@@ -3,7 +3,7 @@ import RecipeManager from "../../modules/RecipeManager";
 
 
 const RecipeEditForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""});
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", userId: parseInt(sessionStorage.getItem("credentails"))});
     const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false);
 
@@ -42,7 +42,8 @@ const RecipeEditForm = props => {
             id: props.match.params.recipeId,
             name: recipe.name,
             recipe: recipe.recipe,
-            url: recipe.url
+            url: recipe.url,
+            userId: recipe.userId
        
         };
 
