@@ -2,6 +2,7 @@ import React from "react";
 import "./Comment.css";
 
 const CommentCard = props => {
+    // if you are the current user you can edit, else you can only view the comment
    const currentUserId = parseInt(sessionStorage.getItem("credentails"))
    if(props.comment.userId === currentUserId){
     return(

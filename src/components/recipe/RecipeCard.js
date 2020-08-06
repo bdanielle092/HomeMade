@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import "./Recipe.css";
 
 const RecipeCard = props => {
+     // if you are the current user you can view this page else you can only view recipe details 
     const currentUser = parseInt(sessionStorage.getItem("credentails"))
     if(props.recipe.userId === currentUser) {
     return (
@@ -37,9 +38,9 @@ const RecipeCard = props => {
                     <picture>
                         <img src={props.recipe.url} alt="ice cream pictures"/>
                     </picture>
-                    <Link to={`/recipe/${props.recipe.id}`}>
-                        <button>Recipe</button>
-                    </Link>
+                <Link to={`/recipes/${props.recipe.id}`}>
+                    <button>Recipe</button>
+                </Link>
                 </div>
             </div>
         )
