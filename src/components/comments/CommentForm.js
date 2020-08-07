@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import CommentManager from "../../modules/CommentManager";
-
+import "./CommentForm.css";
 
 const CommentForm = props => {
     const userId = JSON.parse(sessionStorage.getItem("credentails"));
@@ -38,7 +38,7 @@ const CommentForm = props => {
                     />
                     <label htmlFor="comment">Comment</label>
                     </div>
-                    <div className="alignRight">
+                    <div className="alignRight-comment">
                         <button 
                         type="button"
                         disabled={isLoading}

@@ -12,7 +12,7 @@
 
 /* color and size of the buttons */
 .comment button {
-  background-color:#1982C4;
+  background-color: #9A8C98;
   border: none;
   color: cornsilk;
   text-align: center;
@@ -26,7 +26,7 @@
 }
 /* color on buttons turn blue when you hover over them  */
 .comment button:hover {
-  background-color: #FFCA3A;
+  background-color: gray;
 }
 /* put edit button to the right  */
 .button .alignRight {

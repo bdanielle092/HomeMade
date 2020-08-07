@@ -21,7 +21,7 @@ fieldset button {
     max-width: 9em;
     padding: .5em;
     margin: .3em auto;
-    background-color: #1982C4;
+    background-color: #9A8C98 ;
     border: none;
     color: cornsilk;
     text-align: center;
@@ -59,7 +59,7 @@ fieldset .alignRight {
 }
 /* sumbit button turn blue when you hover over it  */
 fieldset button:hover {
-    background-color: #FFCA3A;
+    background-color: gray;
   }
   
 .hidden {
