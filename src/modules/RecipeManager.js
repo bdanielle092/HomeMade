@@ -31,5 +31,9 @@ export default {
           body: JSON.stringify(editedRecipe)
       }).then(data => data.json())
   }
-//   http://localhost:5002/recipes?q=name
+//   getRecipesByRecipeName(name){
+//     return fetch(`${remoteURL}/recipes/${recipe.name}`)
+//   }
+
+
 }

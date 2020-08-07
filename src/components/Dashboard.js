@@ -15,6 +15,11 @@ const Dashboard = (props) => {
                     <div className="Banner">
                         <Banner2 {...props}/>
                     </div>
+                    <div className="search-recipe">
+                        <input type="search" placeholder="search recipes"/>
+                        <button className="button-recipe">Search</button>
+
+                    </div>
                     <div>
                         <RecipeList {...props}/>
                     </div>
