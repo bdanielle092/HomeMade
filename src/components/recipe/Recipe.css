@@ -13,7 +13,7 @@
 }
 /* for the recipe name at the top */
 .recipeName{
-    background-color:#1982C4;
+    background-color: #9A8C98;
     color: cornsilk;
     text-align: center;
     display: inline-block;
@@ -32,7 +32,7 @@ img{
 
 /* color and size of the buttons */
 .recipe button {
-    background-color:#1982C4;
+    background-color:#9A8C98;
     border: none;
     color: cornsilk;
     text-align: center;
@@ -51,5 +51,5 @@ img{
 
   /* color on buttons turn blue when you hover over them  */
   .recipe button:hover {
-    background-color: #FFCA3A;
+    background-color: grey;
   }
