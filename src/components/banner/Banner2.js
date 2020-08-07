@@ -14,7 +14,7 @@ const Banner = props => {
        
         <header>
             <h1 className="site-title">
-                    Home Made
+                    HomeMade
             </h1>
             
             <div className="alignRight">

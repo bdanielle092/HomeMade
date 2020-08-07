@@ -30,10 +30,10 @@ export default {
           },
           body: JSON.stringify(editedRecipe)
       }).then(data => data.json())
+  },
+  getRecipesByRecipeName(name){
+    return fetch(`${remoteURL}/recipes?q=${name}`).then(result => result.json())
   }
-//   getRecipesByRecipeName(name){
-//     return fetch(`${remoteURL}/recipes/${recipe.name}`)
-//   }
-
+//   http://localhost:5002/recipes?q=blueberry
 
 }

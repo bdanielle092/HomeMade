@@ -4,7 +4,16 @@ import RecipeManager from "../../modules/RecipeManager";
 
 
 const RecipeList = (props) => {
+    const getRecipeName = (name) => {
+       
+        return RecipeManager.getRecipesByRecipeName(name).then((results) => {
+            console.log("results", results)
+           setSearchResults(results)
+        })
+    }
     const [recipes, setRecipes] = useState([])
+    const [searchRecipeName, setSearchRecipeName] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
 
     const getRecipes = () => {
         
@@ -12,6 +21,13 @@ const RecipeList = (props) => {
             setRecipes(recipesFromAPI)
         });
     };
+   
+    
+   const handleChange = event => {
+    setSearchRecipeName(event.target.value)
+    getRecipeName(searchRecipeName)
+   }
+
 
     const deleteRecipe = id => {
         RecipeManager.delete(id)
@@ -31,6 +47,10 @@ const RecipeList = (props) => {
             Add Recipe
             </button>
         </section>
+
+        <div className="search-recipe">
+                <input type="text" placeholder="search" value={searchRecipeName} onChange={handleChange}/>
+         </div>
 
         <div className="container-cards">
             {recipes.map(recipe => <RecipeCard 

@@ -94,6 +94,12 @@
       "comment": "how was the cookie dough  ice cream ?",
       "userId": 1,
       "postedId": 1
+    },
+    {
+      "id": 5,
+      "comment": "hi i'm kaylis!",
+      "userId": 5,
+      "postedId": 5
     }
   ]
 }

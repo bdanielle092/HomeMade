@@ -1,12 +1,12 @@
 // import {Route} from "react-router-dom";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import RecipeList from "./recipe/RecipeList"
 import Banner2 from "./banner/Banner2";
 import CommentList from "./comments/CommentList";
+import RecipeManager from "../modules/RecipeManager";
 
 // this is displaying the main card to the dashboard
 const Dashboard = (props) => {
-   
 
     return (
         <React.Fragment>
@@ -15,11 +15,7 @@ const Dashboard = (props) => {
                     <div className="Banner">
                         <Banner2 {...props}/>
                     </div>
-                    <div className="search-recipe">
-                        <input type="search" placeholder="search recipes"/>
-                        <button className="button-recipe">Search</button>
-
-                    </div>
+                    
                     <div>
                         <RecipeList {...props}/>
                     </div>
