@@ -1,17 +1,19 @@
 header{
     background-color: whitesmoke;
-    border: #FFCA3A solid 3px;
+    border: gray solid 3px;
     
 }
 
 .site-title {
-   color: #1982C4;
+   color:#9A8C98;
    text-align: center;
+   font-family: cursive;
    
 }
 
 .site-catchpharse{
-    color: #1982C4;
+    color: #9A8C98;
     text-align: center;
+    font-family: cursive;
 }
  

@@ -12,13 +12,11 @@ I want to build this app to be able to get feedback about ice cream we made and 
 
 Features included in MVP Definition: 
 User-specific CRUD for ice cream recipes
-User-specific viewing other users pages and leaving comments
-User-specific you can search other users and view their page
+User-specific you can search other users recipes and view their recipes
 User-specific user can edit their comments but not other users
  
 
 Features that are Stretch Goals:
-Be able to search for ice cream recipes ex. Recipes with chocolate 
 Ability to filter the ice cream recipes by type ex. Fruit ice cream 
 
 
