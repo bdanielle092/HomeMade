@@ -112,12 +112,6 @@
       "comment": "hi",
       "postedId": 5,
       "id": 6
-    },
-    {
-      "id": 7,
-      "comment": "hi i'm sam",
-      "userId": 6,
-      "postedId": 6
     }
   ]
 }
