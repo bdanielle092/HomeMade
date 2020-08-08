@@ -23,6 +23,12 @@
       "email": "joy@home.com",
       "password": "1234",
       "id": 4
+    },
+    {
+      "username": "kaylis",
+      "email": "kaylis@home.com",
+      "password": "1234",
+      "id": 5
     }
   ],
   "recipes": [
@@ -97,9 +103,21 @@
     },
     {
       "id": 5,
-      "comment": "hi i'm kaylis!",
+      "comment": "hi i'm kaylis",
       "userId": 5,
       "postedId": 5
+    },
+    {
+      "userId": 5,
+      "comment": "hi",
+      "postedId": 5,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "comment": "hi i'm sam",
+      "userId": 6,
+      "postedId": 6
     }
   ]
 }
