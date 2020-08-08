@@ -4,6 +4,15 @@ import CommentManager from "../../modules/CommentManager";
 
 const CommentList = (props) => {
     const [comments, setComments] = useState([])
+    // const [username, setUsername] = useState([])
+
+    // const getAllCommentByUsername = (username) => {
+    //     return CommentManager.getCommentsbyUserName(username).then((results) => {
+    //         setUsername(results)
+    //     })
+    // }
+
+  
 
     
     const getComments = () => {
@@ -12,6 +21,10 @@ const CommentList = (props) => {
             setComments(commentsFromAPI)
         });
     };
+
+    // useEffect(() => {
+    //     getAllCommentByUsername()
+    // }, [])
 
     useEffect(() => {
         getComments();
@@ -27,7 +40,7 @@ const CommentList = (props) => {
             </button>
         </section>
         <div className="container-card">
-            {comments.map(comment => <CommentCard key={comment.id} comment={comment} {...props} />)}
+            {comments.map(comment => <CommentCard key={comment.id} comment={comment}  {...props} />)}
         </div>
          </>
     );
