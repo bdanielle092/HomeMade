@@ -11,7 +11,7 @@ const CommentCard = props => {
         <div className="comment-box">
         <div className="comment">
             <div className="comment-content">
-                 <span className="card-comment">{props.comment.user.username}</span>
+                 <span className="card-username">{props.comment.user.username}: </span>
                 <span className="card-comment">{props.comment.comment}</span>
                 
                 
@@ -32,7 +32,7 @@ const CommentCard = props => {
            <div className="comment-box">
                <div className="comment">
                    <div className="comment-content">
-                   <span className="card-comment">{props.comment.user.username}</span>
+                   <span className="card-username">{props.comment.user.username}: </span>
                        <span className="card-comment">{props.comment.comment}</span>
                    </div>
                </div>

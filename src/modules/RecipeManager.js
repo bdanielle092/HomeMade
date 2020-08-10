@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default {
     get(id) {
-        return fetch(`${remoteURL}/recipes/${id}`).then(result => result.json())
+        return fetch(`${remoteURL}/recipes/${id}?_expand=user`).then(result => result.json())
     },
     getAll(){
         return fetch(`${remoteURL}/recipes`).then(result => result.json())
@@ -30,11 +30,10 @@ export default {
           },
           body: JSON.stringify(editedRecipe)
       }).then(data => data.json())
+  },
+  getRecipesByUsername(){
+      return fetch(`${remoteURL}/recipes?_expand=user`).then(result => result.json())
   }
 
-//   getRecipesByRecipeName(name){
-//     return fetch(`${remoteURL}/recipes?q=${name}`).then(result => result.json())
-//   }
-//   http://localhost:5002/recipes?q=blueberry
 
 }

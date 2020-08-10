@@ -102,10 +102,10 @@
       "postedId": 1
     },
     {
+      "id": 5,
+      "comment": "The Chocolate ice cream was really good! ",
       "userId": 1,
-      "comment": "hi i'm kaylis",
-      "postedId": 1,
-      "id": 5
+      "postedId": 1
     }
   ]
 }

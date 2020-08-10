@@ -47,8 +47,6 @@ img{
  
   }
 
-
-
   /* color on buttons turn blue when you hover over them  */
   .recipe button:hover {
     background-color: grey;

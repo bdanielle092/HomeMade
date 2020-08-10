@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import CommentManager from "../../modules/CommentManager";
 import "./CommentForm.css";
-import { useParams } from "react-router-dom";
+
 
 const CommentForm = props => {
     const userId = JSON.parse(sessionStorage.getItem("credentails"));

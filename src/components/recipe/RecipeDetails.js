@@ -3,7 +3,7 @@ import RecipeManager from "../../modules/RecipeManager";
 import "./RecipeDetail.css"
 
 const RecipeDetail = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: ""})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", user: {}})
 
    useEffect(() => {
        RecipeManager.get(props.recipeId)
@@ -11,7 +11,8 @@ const RecipeDetail = props => {
            setRecipe({
                name: recipe.name,
                recipe: recipe.recipe,
-               url: recipe.url
+               url: recipe.url,
+               user: recipe.user
            });
        });
    }, [props.recipeId]);
@@ -20,6 +21,7 @@ const RecipeDetail = props => {
        <div className="recipe">
            <div className="recipe-content">
            <h3>Name: {recipe.name}</h3>
+           <h4>Username: {recipe.user.username}</h4>
                <picture>
                <img src={recipe.url} alt="ice cream pictures" />
                </picture>

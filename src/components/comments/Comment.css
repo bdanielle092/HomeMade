@@ -38,3 +38,6 @@
   justify-content: end;
   padding-left: 2em;
 }
+.card-username{
+  font-weight: bold;
+}
