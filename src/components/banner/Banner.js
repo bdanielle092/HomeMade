@@ -10,7 +10,7 @@ const Banner = props => {
        
         <header>
             <h1 className="site-title">
-                    Home Made
+                    HomeMade
             </h1>
             <h2 className="site-catchpharse">
                Ice Cream for All

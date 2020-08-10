@@ -4,23 +4,40 @@ import RecipeManager from "../../modules/RecipeManager";
 
 
 const RecipeList = (props) => {
+
     const [recipes, setRecipes] = useState([])
+    const [search, setSearch] = useState("")
+    // this useState is storing the filtered results
+    const [filteredRecipes, setFilteredRecipes] = useState ([])
 
     const getRecipes = () => {
-        
         return RecipeManager.getAll().then(recipesFromAPI => {
             setRecipes(recipesFromAPI)
         });
     };
-
+   
+  
     const deleteRecipe = id => {
         RecipeManager.delete(id)
         .then(() => RecipeManager.getAll().then(setRecipes));
     };
 
+    // Whenever something changes in the search variable it will trigger this effect 
+    // I am setting the setFilterRecipes
+    // then filtering through the recipes and getting the recipes by name. tolowercase converts a string to lower case letters
+    // .includes checks to see if there are any lower case letters in the search 
     useEffect(() => {
-        getRecipes();
-    }, []);
+        getRecipes()
+    }, [])
+    useEffect(() => {
+        setFilteredRecipes(
+            recipes.filter(recipe =>
+               recipe.name.toLowerCase().includes(search.toLowerCase())
+            )
+        )
+        // if something changes in the recipes again search for the fliters
+    }, [search, recipes])
+       
 
     return (
         <>
@@ -32,8 +49,13 @@ const RecipeList = (props) => {
             </button>
         </section>
 
+        <div className="search-recipe">
+            {/* the onChange is updating the state variable  */}
+                <input type="text" placeholder="search recipes" onChange={e => setSearch(e.target.value)}/>
+         </div>
+
         <div className="container-cards">
-            {recipes.map(recipe => <RecipeCard 
+            {filteredRecipes.map(recipe => <RecipeCard 
             key={recipe.id} 
             recipe={recipe} 
             deleteRecipe={deleteRecipe} 
