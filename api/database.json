@@ -106,6 +106,12 @@
       "comment": "The Chocolate ice cream was really good! ",
       "userId": 1,
       "postedId": 1
+    },
+    {
+      "id": 6,
+      "comment": "hello",
+      "userId": 1,
+      "postedId": 1
     }
   ]
 }
