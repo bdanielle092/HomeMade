@@ -1,6 +1,7 @@
 import React, {useState} from  "react";
 import RecipeManager from  "../../modules/RecipeManager";
-import "./RecipeForm.css";
+
+
 
 const RecipeForm = props => {
     const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", userId: parseInt(sessionStorage.getItem("credentails"))})

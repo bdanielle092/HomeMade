@@ -51,3 +51,11 @@ img{
   .recipe button:hover {
     background-color: grey;
   }
+  
+/* spaces the cards */
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+

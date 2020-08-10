@@ -17,9 +17,9 @@ const Banner = props => {
                     HomeMade
             </h1>
             
-            <div className="alignRight">
+            <div className="alignRight-logout">
             <button 
-              className="button" 
+              className="button-logout" 
               onClick={handleLogout}> 
               Logout </button>
               </div>
