@@ -6,28 +6,19 @@ const CommentList = (props) => {
     const [comments, setComments] = useState([])
     // const [username, setUsername] = useState([])
 
-    // const getAllCommentByUsername = (username) => {
-    //     return CommentManager.getCommentsbyUserName(username).then((results) => {
-    //         setUsername(results)
-    //     })
-    // }
+    const getAllCommentByUsername = () => {
+        return CommentManager.getCommentsbyUserName().then((results) => {
+            console.log(results)
+            setComments(results)
+        })
+    }
 
   
 
     
-    const getComments = () => {
-        
-        return CommentManager.getAll().then(commentsFromAPI => {
-            setComments(commentsFromAPI)
-        });
-    };
-
-    // useEffect(() => {
-    //     getAllCommentByUsername()
-    // }, [])
 
     useEffect(() => {
-        getComments();
+        getAllCommentByUsername();
     }, []);
     
     return (
