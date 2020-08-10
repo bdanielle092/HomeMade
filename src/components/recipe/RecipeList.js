@@ -10,6 +10,12 @@ const RecipeList = (props) => {
     // this useState is storing the filtered results
     const [filteredRecipes, setFilteredRecipes] = useState ([])
 
+    // fetch call that gets the usernames for recipes
+    const getAllRecipeByUsername = () => {
+        return RecipeManager.getRecipesByUsername().then((results) => {
+            setRecipes(results)
+        })
+    }
     const getRecipes = () => {
         return RecipeManager.getAll().then(recipesFromAPI => {
             setRecipes(recipesFromAPI)
@@ -22,20 +28,24 @@ const RecipeList = (props) => {
         .then(() => RecipeManager.getAll().then(setRecipes));
     };
 
+    useEffect(() => {
+        getAllRecipeByUsername()
+       
+    }, [])
+
+  
+    
     // Whenever something changes in the search variable it will trigger this effect 
     // I am setting the setFilterRecipes
     // then filtering through the recipes and getting the recipes by name. tolowercase converts a string to lower case letters
     // .includes checks to see if there are any lower case letters in the search 
-    useEffect(() => {
-        getRecipes()
-    }, [])
     useEffect(() => {
         setFilteredRecipes(
             recipes.filter(recipe =>
                recipe.name.toLowerCase().includes(search.toLowerCase())
             )
         )
-        // if something changes in the recipes again search for the fliters
+        // this is watching search and anytime it changes it will filtered through the recipes.  recipes it what irritating over.
     }, [search, recipes])
        
 
@@ -59,7 +69,7 @@ const RecipeList = (props) => {
             key={recipe.id} 
             recipe={recipe} 
             deleteRecipe={deleteRecipe} 
-            getRecipes={getRecipes} 
+            getRecipe={getRecipes} 
             {...props}/> )}
         </div>
         </>

@@ -103,21 +103,9 @@
     },
     {
       "id": 5,
-      "comment": "hi i'm kaylis",
-      "userId": 5,
-      "postedId": 5
-    },
-    {
-      "userId": 5,
-      "comment": "hi",
-      "postedId": 5,
-      "id": 6
-    },
-    {
-      "id": 7,
-      "comment": "hi i'm sam",
-      "userId": 6,
-      "postedId": 6
+      "comment": "The Chocolate ice cream was really good! ",
+      "userId": 1,
+      "postedId": 1
     }
   ]
 }

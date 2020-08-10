@@ -24,6 +24,9 @@ export default {
           },
           body: JSON.stringify(editedComment)
         }).then(data => data.json());
+      },
+      getCommentsbyUserName(){
+          return fetch(`${remoteURL}/comments?_expand=user`).then(result => result.json())
       }
-    // http://localhost:5002/comments?_expand=user
+   
 }

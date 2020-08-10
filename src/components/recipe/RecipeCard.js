@@ -9,7 +9,6 @@ const RecipeCard = props => {
     return (
         <div className="recipe">
             <div className="recipe-content">
-               
             <h3>
                 <span className="recipeName">{props.recipe.name}</span>
                 </h3>

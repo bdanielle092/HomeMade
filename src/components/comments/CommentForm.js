@@ -2,9 +2,10 @@ import React, {useState} from "react";
 import CommentManager from "../../modules/CommentManager";
 import "./CommentForm.css";
 
+
 const CommentForm = props => {
     const userId = JSON.parse(sessionStorage.getItem("credentails"));
-    const [comment, setComment] = useState({userId: userId, comment: "", postedId: parseInt(sessionStorage.getItem("credentails"))});
+    const [comment, setComment] = useState({userId: userId, comment: "",  postedId: parseInt(sessionStorage.getItem("credentails"))});
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
@@ -12,6 +13,8 @@ const CommentForm = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setComment(stateToChange);
     };
+
+   
 
     const constructNewComment = evt => {
         evt.preventDefault();
@@ -38,6 +41,9 @@ const CommentForm = props => {
                     />
                     <label htmlFor="comment">Comment</label>
                     </div>
+
+
+                      
                     <div className="alignRight-comment">
                         <button 
                         type="button"
