@@ -5,7 +5,7 @@ import CommentManager from "../../modules/CommentManager";
 const CommentList = (props) => {
     const [comments, setComments] = useState([])
    
-
+    // fetch call to get username for comments
     const getAllCommentByUsername = () => {
         return CommentManager.getCommentsbyUserName().then((results) => {
             

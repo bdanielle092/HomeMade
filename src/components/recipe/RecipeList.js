@@ -10,7 +10,7 @@ const RecipeList = (props) => {
     // this useState is storing the filtered results
     const [filteredRecipes, setFilteredRecipes] = useState ([])
 
-
+    // fetch call that gets the usernames for recipes
     const getAllRecipeByUsername = () => {
         return RecipeManager.getRecipesByUsername().then((results) => {
             setRecipes(results)
@@ -45,7 +45,7 @@ const RecipeList = (props) => {
                recipe.name.toLowerCase().includes(search.toLowerCase())
             )
         )
-        // this is watching search and anytime it changes it will filtered through the recipes.  recipes it what its irrecting over.
+        // this is watching search and anytime it changes it will filtered through the recipes.  recipes it what irritating over.
     }, [search, recipes])
        
 
