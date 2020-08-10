@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import CommentManager from "../../modules/CommentManager";
-import "./CommentForm.css";
+
 
 
 const CommentForm = props => {
@@ -44,7 +44,7 @@ const CommentForm = props => {
 
 
                       
-                    <div className="alignRight-comment">
+                    <div className="alignRight">
                         <button 
                         type="button"
                         disabled={isLoading}

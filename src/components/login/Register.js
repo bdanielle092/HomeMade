@@ -95,7 +95,8 @@ const Register = props => {
             <label htmlFor="inputconfirmPassword">Comfirm Password</label>   
         </div>
        
-        <button type="submit" 
+        <button className="alignRight"
+                type="submit" 
                 id="login" 
                 onClick={handleRegister}
                 >Register</button>
