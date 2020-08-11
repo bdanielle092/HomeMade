@@ -38,13 +38,11 @@ img{
     text-align: center;
     text-decoration: none;
     display: flex;
-    
     font-size: 14px;
     padding: .5em;
     border-radius: 2px;
     margin: .1em;
     width: 100%;
- 
   }
 
   /* color on buttons turn blue when you hover over them  */

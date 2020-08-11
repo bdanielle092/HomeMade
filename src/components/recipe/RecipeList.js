@@ -66,6 +66,7 @@ const RecipeList = (props) => {
             {/* the onChange is updating the state variable  */}
                 <input type="text" placeholder="search recipes" onChange={e => setSearch(e.target.value)}/>
          </div>
+         
 
         <div className="container-cards">
             {filteredRecipes.map(recipe => <RecipeCard 
