@@ -3,7 +3,7 @@ import RecipeManager from "../../modules/RecipeManager";
 
 
 const RecipeEditForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", userId: parseInt(sessionStorage.getItem("credentails"))});
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", typeId: 1, userId: parseInt(sessionStorage.getItem("credentails"))});
     const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false);
 
@@ -43,13 +43,17 @@ const RecipeEditForm = props => {
             name: recipe.name,
             recipe: recipe.recipe,
             url: recipe.url,
+            typeId: parseInt(recipe.typeId),
             userId: recipe.userId
        
         };
 
         RecipeManager.updated(editedRecipe)
-        .then(() => props.history.push("/Dashboard"))
-    }
+        .then(() => {
+             // change to a number and not a string 
+            //  recipe.typeId=parseInt(recipe.typeId)
+            props.history.push("/Dashboard")})
+        }
 
     useEffect(() => {
         RecipeManager.get(props.match.params.recipeId)
@@ -84,6 +88,18 @@ const RecipeEditForm = props => {
                       row="5" cols="50">
                     </textarea>
                     <label htmlFor="recipe">Recipe</label>
+
+                    <select
+                      required
+                      className="form-control"
+                      id="typeId"
+                      value={recipe.typeId}
+                      onChange={handleFieldChange}>
+                          <option value="1">Regular</option>
+                          <option value="2">Fruit</option>
+                          <option value="3">Lactose</option>
+                    </select>
+                    <label htmlFor="type">Type</label>
 
                     <input 
                     type="file"

@@ -4,10 +4,11 @@ import RecipeManager from  "../../modules/RecipeManager";
 
 
 const RecipeForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", typeId: 0, userId: parseInt(sessionStorage.getItem("credentails"))})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", typeId: 1, userId: parseInt(sessionStorage.getItem("credentails"))})
     const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false)
 
+    
     const uploadImage = async e => {
         const files = e.target.files
         const data = new FormData()
@@ -43,7 +44,8 @@ const RecipeForm = props => {
         if(recipe.name === "" || recipe.recipe === "" || recipe.url === "" || recipe.type === "") {
             window.alert("Please input field");
         }else {
-            
+            // change to a number and not a string 
+            recipe.typeId=parseInt(recipe.typeId)
             setIsLoading(true);
             RecipeManager.post(recipe)
             .then(() => props.history.push("/Dashboard"));
@@ -87,8 +89,9 @@ const RecipeForm = props => {
                     <select
                       required
                       className="form-control"
-                      id="type"
-                      value={recipe.type}>
+                      id="typeId"
+                      value={recipe.type}
+                      onChange={handleFieldChange}>
                           <option value="1">Regular</option>
                           <option value="2">Fruit</option>
                           <option value="3">Lactose</option>
