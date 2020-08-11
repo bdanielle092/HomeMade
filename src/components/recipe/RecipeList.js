@@ -10,6 +10,7 @@ const RecipeList = (props) => {
     const [search, setSearch] = useState("")
     // this useState is storing the filtered results
     const [filteredRecipes, setFilteredRecipes] = useState ([])
+    // const [type, setType] = useState("")
 
     // fetch call that gets the usernames for recipes
     const getAllRecipeByUsername = () => {
@@ -17,6 +18,7 @@ const RecipeList = (props) => {
             setRecipes(results)
         })
     }
+    
     const getRecipes = () => {
         return RecipeManager.getAll().then(recipesFromAPI => {
             setRecipes(recipesFromAPI)
@@ -34,7 +36,6 @@ const RecipeList = (props) => {
        
     }, [])
 
-  
     
     // Whenever something changes in the search variable it will trigger this effect 
     // I am setting the setFilterRecipes
@@ -59,6 +60,7 @@ const RecipeList = (props) => {
             Add Recipe
             </button>
         </section>
+      
 
         <div className="search-recipe">
             {/* the onChange is updating the state variable  */}

@@ -4,7 +4,7 @@ import RecipeManager from  "../../modules/RecipeManager";
 
 
 const RecipeForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", type: "", userId: parseInt(sessionStorage.getItem("credentails"))})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", typeId: 0, userId: parseInt(sessionStorage.getItem("credentails"))})
     const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false)
 
@@ -84,15 +84,16 @@ const RecipeForm = props => {
                     </textarea>
                     <label htmlFor="recipe">Recipe</label>
 
-                    {/* <select
+                    <select
                       required
                       className="form-control"
                       id="type"
-                      value="type">
+                      value={recipe.type}>
                           <option value="1">Regular</option>
                           <option value="2">Fruit</option>
                           <option value="3">Lactose</option>
-                    </select> */}
+                    </select>
+                    <label htmlFor="type">Type</label>
 
                      <input 
                     type="file"

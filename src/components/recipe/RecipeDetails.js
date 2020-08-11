@@ -3,15 +3,16 @@ import RecipeManager from "../../modules/RecipeManager";
 import "./RecipeDetail.css"
 
 const RecipeDetail = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", user: {}})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", type: {}, user: {}})
 
    useEffect(() => {
-       RecipeManager.get(props.recipeId)
+       RecipeManager.getRecipeByType(props.recipeId)
        .then(recipe => {
            setRecipe({
                name: recipe.name,
                recipe: recipe.recipe,
                url: recipe.url,
+               type: recipe.type,
                user: recipe.user
            });
        });
@@ -25,6 +26,7 @@ const RecipeDetail = props => {
                <picture>
                <img src={recipe.url} alt="ice cream pictures" />
                </picture>
+               <h4>Type: {recipe.type.type}</h4>
                <p className="textbox">Recipe: {recipe.recipe}</p>
 
            </div>
