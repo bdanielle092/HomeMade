@@ -58,7 +58,7 @@ const CommentEditForm = props => {
                     />
 
                     <div className="alignRight">
-                        <button
+                        <button 
                         type="button" disabled={isLoading}
                         onClick={updateExistingComment}
                         className="btn btn-primary"

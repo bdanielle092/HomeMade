@@ -4,7 +4,7 @@ import RecipeManager from  "../../modules/RecipeManager";
 
 
 const RecipeForm = props => {
-    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", userId: parseInt(sessionStorage.getItem("credentails"))})
+    const [recipe, setRecipe] = useState({name: "", recipe: "", url: "", type: "", userId: parseInt(sessionStorage.getItem("credentails"))})
     const [image, setImage] = useState("")
     const [isLoading, setIsLoading ] = useState(false)
 
@@ -40,7 +40,7 @@ const RecipeForm = props => {
 
     const constructNewRecipe = evt => {
         evt.preventDefault();
-        if(recipe.name === "" || recipe.recipe === "") {
+        if(recipe.name === "" || recipe.recipe === "" || recipe.url === "" || recipe.type === "") {
             window.alert("Please input field");
         }else {
             
@@ -83,6 +83,16 @@ const RecipeForm = props => {
                       row="5" cols="50">
                     </textarea>
                     <label htmlFor="recipe">Recipe</label>
+
+                    {/* <select
+                      required
+                      className="form-control"
+                      id="type"
+                      value="type">
+                          <option value="1">Regular</option>
+                          <option value="2">Fruit</option>
+                          <option value="3">Lactose</option>
+                    </select> */}
 
                      <input 
                     type="file"
