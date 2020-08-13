@@ -58,11 +58,11 @@
     },
     {
       "id": 12,
-      "userId": 1,
       "name": "Strawberry ",
-      "typeId": 2,
       "recipe": "2 cups chopped strawberries \n1 cup sugar (divided)\n2 cups heavy cream \n1 cup whole milk\n 1/2 tsp vanilla extract \n1 dash salt \nMix chopped strawberries with 1/2 cup sugar in a medium sized bowl. Allow to set for about 15 minutes so strawberries release their juices.  Blend strawberries up in a blender or food processor.  In a large bowl combine strawberry mixture with heavy cream, whole milk, vanilla extract, salt and remaining sugar. Set aside. Pour strawberry cream mixture into prepared ice cream maker. Allow to run according to manufactures instructions (Mine is about 30 minutes.)  Serve now for soft serve ice cream.  For scoop able ice cream, scoop ice cream into a bread loaf pan and cover with plastic wrap. Place in the freezer for 6 hours up to overnight. ",
-      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1595987304/icecream/euwjpvlyxzzke9p6gfoe.webp"
+      "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1595987304/icecream/euwjpvlyxzzke9p6gfoe.webp",
+      "typeId": 2,
+      "userId": 1
     },
     {
       "id": 13,

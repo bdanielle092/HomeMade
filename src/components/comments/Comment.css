@@ -33,16 +33,19 @@
   background-color: gray;
 }
 /* put edit button to the right  */
-.button .alignRight {
+/* .button .alignRight {
   display: flex;
   justify-content: right;
-}
-.alignRight{
+} */
+/* .alignRight{
   display: flex;
   justify-content: end;
   padding-left: 2em;
 
-}
+} */
+/* .alignRight{
+  text-align: right;
+} */
 .card-username{
   font-weight: bold;
 }

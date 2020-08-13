@@ -53,6 +53,7 @@ const RecipeList = (props) => {
 
     return (
         <>
+        <div className="align-top">
         <section className="section-content">
             <button type="button"
             className="btn"
@@ -65,6 +66,7 @@ const RecipeList = (props) => {
         <div className="search-recipe">
             {/* the onChange is updating the state variable  */}
                 <input type="text" placeholder="search recipes" onChange={e => setSearch(e.target.value)}/>
+         </div>
          </div>
          
 

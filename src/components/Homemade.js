@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-import "./Homemade.css";
 import ApplicationViews from "./ApplicationViews";
 
 const Homemade = () => {

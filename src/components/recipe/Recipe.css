@@ -51,9 +51,17 @@ img{
   }
   
 /* spaces the cards */
-.container-cards {
+ .container-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  .align-top{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .search-recipe{
+    margin-left: 2em;
   }
 

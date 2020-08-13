@@ -1,3 +1,8 @@
 .textbox{
     white-space: pre-wrap;
 }
+
+/* #root > .recipe{
+    display: flex;
+    justify-content: space-around;
+} */
