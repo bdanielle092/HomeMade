@@ -6,12 +6,6 @@
 
 }
 
-/* centers the text */
-.comment-content {
-  text-align: left;
-
-  
-}
 
 /* color and size of the buttons */
 .comment button {
@@ -32,21 +26,12 @@
 .comment button:hover {
   background-color: gray;
 }
-/* put edit button to the right  */
-/* .button .alignRight {
-  display: flex;
-  justify-content: right;
-} */
-/* .alignRight{
-  display: flex;
-  justify-content: end;
-  padding-left: 2em;
 
-} */
-/* .alignRight{
-  text-align: right;
-} */
 .card-username{
   font-weight: bold;
+}
+
+.comment-content{
+  height: 40px;
 }
 

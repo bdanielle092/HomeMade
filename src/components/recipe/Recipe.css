@@ -10,6 +10,7 @@
 /* centers the text */
 .recipe-content {
     text-align: center;
+
 }
 /* for the recipe name at the top */
 .recipeName{
@@ -26,8 +27,7 @@
 img{
     width: 30%;
     height: 30%;
-    padding-top: 1em;
-    
+    padding-top: 1em;  
 }
 
 /* color and size of the buttons */
@@ -37,7 +37,7 @@ img{
     color: cornsilk;
     text-align: center;
     text-decoration: none;
-    display: flex;
+    display: inline-block;
     font-size: 14px;
     padding: .5em;
     border-radius: 2px;
@@ -62,6 +62,9 @@ img{
     
   }
   .search-recipe{
-    margin-left: 2em;
+    margin-left: 1em;
   }
+
+
+
 
