@@ -3,5 +3,8 @@ body{
 }
 .textbox{
     white-space: pre-wrap;
+    display: flex;
+    text-align: left;
+    padding: 20px;
 }
 

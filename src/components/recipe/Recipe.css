@@ -73,6 +73,7 @@ img{
   .search-recipe{
     margin-left: 1em;
   }
+  /* moving card to the center */
   .container-detail{
     display: flex;
     justify-content: center ;

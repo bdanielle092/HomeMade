@@ -22,18 +22,19 @@ const RecipeDetail = props => {
        <div className="container-detail">
        <div className="recipe">
            <div className="recipe-content">
-           <h3>Name: {recipe.name}</h3>
-           <h4>Username: {recipe.user.username}</h4>
+           <h2>{recipe.name}</h2>
+           <h4>Created By: {recipe.user.username}</h4>
                <picture>
                <img src={recipe.url} alt="ice cream pictures" />
                </picture>
-               <h4>Type: {recipe.type.type}</h4>
-               <p className="textbox">Recipe: {recipe.recipe}</p>
+               <h4>Type: {recipe.type.type}</h4><br/>
+               <h3>Recipe</h3>
+               <p className="textbox">{recipe.recipe}</p>
 
            </div>
        </div>
        </div>
-   );
+   )
 }
 
 export default RecipeDetail

@@ -29,6 +29,12 @@
       "email": "kaylis@home.com",
       "password": "1234",
       "id": 5
+    },
+    {
+      "username": "Erik",
+      "email": "erik@home.com",
+      "password": "1234",
+      "id": 6
     }
   ],
   "recipes": [
@@ -67,7 +73,7 @@
     {
       "id": 17,
       "name": "Vanilla",
-      "recipe": "Egg yolks\nSugar\nWhole Milk\nHeavy Cream\nVanilla Bean Paste or Vanilla Extract\nStart by adding the egg yolks and sugar to a medium saucepan. Whisk the until it’s a light yellow color and is well combined.\n\nIn another small sauce pan, heat the whole milk over medium-low heat until it just begins to simmer. Do not stir the milk.\n\nThen gradually add the heated milk to the pan with the egg and sugar mixture and stir constantly. Return the combined mixture to heat until it reaches 165º F, but do not allow it to come to a boil. As soon as it reaches the correct temperature, remove it from the heat.\n\nPour custard base into an airtight container and store in the refrigerator until it chills to 65º F. The longer the custard base chills, the creamier your ice cream will be.\nOnce the custard base is ready, stir in the heavy cream and vanilla bean paste (or vanilla extract). Then, pour it into your ice cream maker and process according to your ice cream maker’s instructions.\n",
+      "recipe": "Egg yolks \nSugar \nWhole Milk\nHeavy Cream\n\nVanilla Bean Paste or Vanilla Extract\nStart by adding the egg yolks and sugar to a medium saucepan. Whisk the until it’s a light yellow color and is well combined.\n\nIn another small sauce pan, heat the whole milk over medium-low heat until it just begins to simmer. Do not stir the milk.\n\nThen gradually add the heated milk to the pan with the egg and sugar mixture and stir constantly. Return the combined mixture to heat until it reaches 165º F, but do not allow it to come to a boil. As soon as it reaches the correct temperature, remove it from the heat.\n\nPour custard base into an airtight container and store in the refrigerator until it chills to 65º F. The longer the custard base chills, the creamier your ice cream will be.\nOnce the custard base is ready, stir in the heavy cream and vanilla bean paste (or vanilla extract). Then, pour it into your ice cream maker and process according to your ice cream maker’s instructions.\n",
       "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1597426488/icecream/hmquy2v2hgytrounanpq.jpg",
       "typeId": 1,
       "userId": 1
@@ -121,12 +127,12 @@
       "id": 23
     },
     {
+      "id": 24,
       "name": "strawberry ",
-      "recipe": "Recipe: In a blender, blend the frozen strawberries, coconut milk, and honey until you have a smooth mixture.  Taste and add more sweetener if you prefer.\nPour the mixture into a freezer-safe container (I used a loaf pan cover with plastic wrap and foil), cover tightly, and freeze until solid, at least 3 hours.  Enjoy!!",
+      "recipe": "In a blender, blend the frozen strawberries, coconut milk, and honey until you have a smooth mixture.  Taste and add more sweetener if you prefer.\nPour the mixture into a freezer-safe container (I used a loaf pan cover with plastic wrap and foil), cover tightly, and freeze until solid, at least 3 hours.  Enjoy!!",
       "url": "https://res.cloudinary.com/dszckhcld/image/upload/v1597428009/icecream/qtyzzamhdvvefcycjw0f.jpg",
       "typeId": 3,
-      "userId": 1,
-      "id": 24
+      "userId": 1
     }
   ],
   "types": [
@@ -168,10 +174,10 @@
       "postedId": 1
     },
     {
-      "id": 6,
-      "comment": "hello",
-      "userId": 1,
-      "postedId": 1
+      "id": 7,
+      "comment": "the blueberry ice cream is great!",
+      "userId": 6,
+      "postedId": 6
     }
   ]
 }
