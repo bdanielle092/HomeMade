@@ -19,6 +19,7 @@ const RecipeDetail = props => {
    }, [props.recipeId]);
 
    return (
+       <div className="container-detail">
        <div className="recipe">
            <div className="recipe-content">
            <h3>Name: {recipe.name}</h3>
@@ -30,6 +31,7 @@ const RecipeDetail = props => {
                <p className="textbox">Recipe: {recipe.recipe}</p>
 
            </div>
+       </div>
        </div>
    );
 }

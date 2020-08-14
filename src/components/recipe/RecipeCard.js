@@ -7,6 +7,7 @@ const RecipeCard = props => {
     const currentUser = parseInt(sessionStorage.getItem("credentails"))
     if(props.recipe.userId === currentUser) {
     return (
+        
         <div className="recipe" >
             <div className="recipe-content">
             <h3>
@@ -27,24 +28,27 @@ const RecipeCard = props => {
                 
             </div>
         </div>
+        
     );
     } else {
         return(
+            
             <div className="recipe">
-                <div className="recipe-content">
+                <div className="recipe-content-user">
                     <h3>
                         <span className="recipeName">{props.recipe.name}</span>
                     </h3>
                     <picture>
                         <img src={props.recipe.url} alt="ice cream pictures"/>
                     </picture>
-                {/* <div className="align-down"> */}
+              
                 <Link to={`/recipes/${props.recipe.id}`}>
-                    <button>Recipe</button>
+                    <button className="detail">Recipe</button>
                 </Link>
-                {/* </div> */}
+              
                 </div>
             </div>
+            
         )
     }
 };

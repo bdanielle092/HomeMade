@@ -1,5 +1,8 @@
-
-/* color and szie of the box  */
+.body{
+   background-color: rgb(243, 212, 217)
+   
+}
+/* color and size of the box for crud  */
 fieldset {
     max-width: 40em;
     padding: 4px;
@@ -56,7 +59,7 @@ fieldset input, textarea, fieldset button, fieldset select {
     margin: 0
 }
 
-/* sumbit button turn blue when you hover over it  */
+/* sumbit button turn grey when you hover over it  */
 fieldset button:hover {
     background-color: gray;
   }
@@ -65,7 +68,9 @@ fieldset button:hover {
 }
 /* align the submit buttons to the right  */
 .alignRight {
-    float: right; 
+    float: right;
+    margin: 1em; 
 }
+
 
 

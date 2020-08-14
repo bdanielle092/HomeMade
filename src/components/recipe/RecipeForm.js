@@ -101,10 +101,16 @@ const RecipeForm = props => {
                      <input 
                     type="file"
                     name="file"
-                    id="file"
+                    id="url"
                     onChange={uploadImage}
                     placeholder="upload"
                     />
+                    {/* this displays a preview of the photo */}
+                    {isLoading ? (
+                        <h3>loading...</h3>
+                    ) : (
+                        <img src={recipe.url}/>
+                    )}
 
                      
 

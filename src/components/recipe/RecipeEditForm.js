@@ -104,10 +104,11 @@ const RecipeEditForm = props => {
                     <input 
                     type="file"
                     name="file"
-                    id="file"
+                    id="url"
                     onChange={uploadImage}
                     placeholder="upload"
                     />
+                   
 
                     </div>
                     <div className="alignRight">

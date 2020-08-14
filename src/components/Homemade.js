@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import ApplicationViews from "./ApplicationViews";
+import "./Homemade.css"
 
 const Homemade = () => {
    const isAuthenicated = () => sessionStorage.getItem("credentials") != null;
