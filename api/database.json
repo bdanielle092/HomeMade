@@ -19,22 +19,10 @@
       "password": "faith!"
     },
     {
-      "username": "joy",
-      "email": "joy@home.com",
+      "username": "Tasha",
+      "email": "Tasha@home.com",
       "password": "1234",
       "id": 4
-    },
-    {
-      "username": "kaylis",
-      "email": "kaylis@home.com",
-      "password": "1234",
-      "id": 5
-    },
-    {
-      "username": "Erik",
-      "email": "erik@home.com",
-      "password": "1234",
-      "id": 6
     }
   ],
   "recipes": [
@@ -172,12 +160,6 @@
       "comment": "The Chocolate ice cream was really good! ",
       "userId": 1,
       "postedId": 1
-    },
-    {
-      "id": 7,
-      "comment": "the blueberry ice cream is great!",
-      "userId": 6,
-      "postedId": 6
     }
   ]
 }
