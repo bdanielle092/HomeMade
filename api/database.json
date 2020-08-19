@@ -160,6 +160,12 @@
       "comment": "The Chocolate ice cream was really good! ",
       "userId": 1,
       "postedId": 1
+    },
+    {
+      "id": 6,
+      "comment": "the vanilla is great!!!",
+      "userId": 1,
+      "postedId": 1
     }
   ]
 }
