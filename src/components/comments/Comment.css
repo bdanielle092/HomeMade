@@ -6,12 +6,6 @@
 
 }
 
-/* centers the text */
-.comment-content {
-  text-align: left;
-
-  
-}
 
 /* color and size of the buttons */
 .comment button {
@@ -26,22 +20,19 @@
   border-radius: 2px;
   margin: .1em;
   width: 10%;
- 
 }
-/* color on buttons turn blue when you hover over them  */
+
+/* color on buttons turn gray when you hover over them  */
 .comment button:hover {
   background-color: gray;
 }
-/* put edit button to the right  */
-.button .alignRight {
-  display: flex;
-  justify-content: right;
-}
-.alignRight{
-  display: flex;
-  justify-content: end;
-  padding-left: 2em;
-}
+
 .card-username{
   font-weight: bold;
 }
+/* spacing for the comment cards */
+.comment-content{
+  height: 30px;
+  margin-top: 1em;
+}
+

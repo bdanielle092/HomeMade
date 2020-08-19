@@ -11,7 +11,7 @@ const Dashboard = (props) => {
     return (
         <React.Fragment>
           
-                    
+                    <div className="body">
                     <div className="Banner">
                         <Banner2 {...props}/>
                     </div>
@@ -21,6 +21,7 @@ const Dashboard = (props) => {
                     </div>
                     <div>
                         <CommentList {...props}/>
+                    </div>
                     </div>
 
                 

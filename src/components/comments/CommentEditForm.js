@@ -56,15 +56,15 @@ const CommentEditForm = props => {
                     id="userId"
                     value={comment.userId}
                     />
-
+                    </div>
                     <div className="alignRight">
-                        <button
+                        <button 
                         type="button" disabled={isLoading}
                         onClick={updateExistingComment}
                         className="btn btn-primary"
                         >Submit</button>
                     </div>
-                </div>
+                
             </fieldset>
         </form>
         </>

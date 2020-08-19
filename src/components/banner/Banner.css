@@ -16,4 +16,10 @@ header{
     text-align: center;
     font-family: cursive;
 }
+
+.alignRight-logout{
+    display: flex;
+    justify-content: flex-end;  
+}
+
  

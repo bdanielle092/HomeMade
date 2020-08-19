@@ -1,16 +1,25 @@
+body{
+  background-color: rgb(243, 212, 217)
+}
 /* the color and size of the cards   */
 .recipe {
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
     background: whitesmoke;
     margin-bottom: 2em;
-    width: 50%;
-  
+    width: 30%;
+
 }
 
 /* centers the text */
 .recipe-content {
     text-align: center;
 }
+
+/* centers the text */
+.recipe-content-user {
+  text-align: center;
+}
+
 /* for the recipe name at the top */
 .recipeName{
     background-color: #9A8C98;
@@ -24,10 +33,9 @@
 }
 /* sizing the img */
 img{
-    width: 30%;
-    height: 30%;
-    padding-top: 1em;
-    
+    width: auto;
+    height: 200px;
+    padding-top: 1em;  
 }
 
 /* color and size of the buttons */
@@ -37,14 +45,12 @@ img{
     color: cornsilk;
     text-align: center;
     text-decoration: none;
-    display: flex;
-    
+    display: inline-block;
     font-size: 14px;
     padding: .5em;
     border-radius: 2px;
     margin: .1em;
-    width: 100%;
- 
+    width: 95%;
   }
 
   /* color on buttons turn blue when you hover over them  */
@@ -53,9 +59,26 @@ img{
   }
   
 /* spaces the cards */
-.container-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+ .container-cards{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between ;
+   margin-top: 1em;
   }
+  .align-top{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .search-recipe{
+    margin-left: 1em;
+  }
+  /* moving card to the center */
+  .container-detail{
+    display: flex;
+    justify-content: center ;
+  }
+
+
+
 
